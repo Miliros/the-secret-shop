@@ -38,7 +38,7 @@ export default function NavBar() {
         <div
           className={`${
             isMenuOpen ? "flex" : "hidden"
-          } flex-col sm:flex-row  items-center w-full sm:w-auto space-y-4 sm:space-y-0 sm:space-x-4 mt-4 sm:mt-0`}
+          } flex-col sm:flex-row items-center w-full sm:w-auto space-y-4 sm:space-y-0 sm:space-x-4 mt-4 sm:mt-0 lg:flex`}
         >
           <div className="relative w-full sm:w-48">
             <input
