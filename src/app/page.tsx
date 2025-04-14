@@ -1,6 +1,7 @@
 import NavBar from "@/components/NavBar";
 import Carousel from "@/components/Carousel";
 import { imageUrls } from "../utils/imageData"; // Importamos las URLs de las imágenes
+import MarqueeBar from "@/components/MarqueeBar";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         Old School Tech Shop
       </h2>{" "}
       <Carousel images={imageUrls} />
+      <MarqueeBar />
     </div>
   );
 }
