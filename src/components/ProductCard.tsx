@@ -4,24 +4,16 @@ import { useCart } from "./CartContext";
 import { useState } from "react";
 import Image from "next/image";
 import ProductDetailModal from "./ProductDetailModal";
+import { Product } from "@/types/types";
 
-interface Props {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  detail: string;
-  image: string;
-}
-
-export function ProductCard({
+export default function ProductCard({
   id,
   name,
   description,
   price,
   detail,
   image,
-}: Props) {
+}: Product) {
   const { addProduct, toggleCart } = useCart();
   const [isModalOpen, setIsModalOpen] = useState(false);
 

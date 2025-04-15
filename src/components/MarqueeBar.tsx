@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 const MarqueeBar: React.FC = () => {
   const text =
     "Free Shipping on Orders Over $50 · New Arrivals In Stock · Shop Now";

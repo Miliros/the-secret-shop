@@ -1,6 +1,6 @@
 "use client";
 
-import type { Product } from "../utils/productData";
+import type { Product } from "../types/types";
 import Image from "next/image";
 import { MdDeleteOutline, MdAddCircleOutline } from "react-icons/md";
 import { useCart } from "./CartContext";
