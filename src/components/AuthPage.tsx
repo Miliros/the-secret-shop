@@ -43,7 +43,7 @@ export default function AuthPage() {
         backgroundImage: "url('images/bg.jpg')",
       }}
     >
-      <div className="bg-[#f9f9f9] p-12 rounded-lg shadow-lg w-96 border border-gray-200">
+      <div className="bg-[#f9f9f9] p-12 rounded-lg shadow-lg w-96 border border-black">
         <h2 className="text-2xl font-bold text-[#333333] text-center mb-4">
           Iniciar Sesión
         </h2>

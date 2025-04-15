@@ -12,9 +12,10 @@ export default function Home() {
       <NavBar />
       <MarqueeBar />
       <Carousel images={imageUrls} />
-      <h2 className="text-center text-4xl font-serif text-gray-800 m-6">
+      <h2 className="text-center text-6xl md:text-8xl lg:text-9xl font-custom text-[#3E2723] m-4">
         Old School Tech Shop
       </h2>
+
       <ProductList products={products} />
     </div>
   );

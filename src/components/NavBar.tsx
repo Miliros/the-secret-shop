@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image"; // Importar Image de Next.js
 import { RiMenuSearchLine } from "react-icons/ri";
 import { HiOutlineShoppingBag, HiOutlineLogout } from "react-icons/hi";
 import { useCart } from "@/components/cart/CartContext";
@@ -16,9 +17,7 @@ export default function NavBar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleLogout = () => {
-    // Eliminar la cookie 'userSession'
     Cookies.remove("userSession");
-    // Redirigir al login
     router.push("/login");
   };
 
@@ -27,7 +26,14 @@ export default function NavBar() {
       <div className="sticky z-10 top-0 h-auto border-b lg:py-2.5 bg-white">
         <div className="px-4 lg:px-6 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 sm:space-x-4">
           <div className="flex items-center justify-between w-full sm:w-auto">
-            <h5 className="text-2xl font-semibold">Old School Tech</h5>
+            <Image
+              src="/images/logo.png"
+              alt="Logo"
+              width={190}
+              height={100}
+              className="w-auto h-12 object-cover"
+              priority
+            />
             <button className="w-12 h-12 lg:hidden" onClick={toggleMenu}>
               <RiMenuSearchLine size={34} />
             </button>
