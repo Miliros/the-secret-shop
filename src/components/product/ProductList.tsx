@@ -13,7 +13,9 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
   const [priceRange, setPriceRange] = useState<[number, number] | null>(null);
 
-  const filteredProducts = products.filter((product) => {
+  const { visibleProducts } = useInfiniteScroll(products, 3);
+
+  const displayedProducts = visibleProducts.filter((product) => {
     const categoryMatch = categoryFilter
       ? product.category === categoryFilter
       : true;
@@ -24,12 +26,6 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
     return categoryMatch && priceMatch;
   });
 
-  const { visibleProducts } = useInfiniteScroll(products, 3);
-
-  const displayedProducts = filteredProducts.filter((product) =>
-    visibleProducts.some((visibleProduct) => visibleProduct.id === product.id)
-  );
-
   return (
     <div className="flex flex-col items-center min-h-screen pt-10 pb-10">
       <ProductFilters
@@ -38,20 +34,29 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        {displayedProducts.map((product, index) => (
-          <div key={`${product.id}-${index}`} className="max-w-[300px] mx-auto">
-            <ProductCard
-              id={product.id.toString()}
-              name={product.name}
-              price={product.price}
-              description={product.description || ""}
-              detail={product.detail || ""}
-              category={product.category}
-              stars={product.stars}
-              image={product.image}
-            />
-          </div>
-        ))}
+        {displayedProducts.length > 0 ? (
+          displayedProducts.map((product, index) => (
+            <div
+              key={`${product.id}-${index}`}
+              className="max-w-[300px] mx-auto"
+            >
+              <ProductCard
+                id={product.id.toString()}
+                name={product.name}
+                price={product.price}
+                description={product.description || ""}
+                detail={product.detail || ""}
+                category={product.category}
+                stars={product.stars}
+                image={product.image}
+              />
+            </div>
+          ))
+        ) : (
+          <p className="text-center text-gray-500 col-span-full">
+            No se encontraron productos con los filtros aplicados.
+          </p>
+        )}
       </div>
     </div>
   );
