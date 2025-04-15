@@ -2,6 +2,39 @@ import { Product } from "../types/types";
 
 export const products: Product[] = [
   {
+    id: "UUID-011",
+    name: "Televisor de los años 90",
+    price: 150,
+    description: "Televisor clásico con antena y roscas.",
+    detail:
+      "El televisor de los años 90 evoca nostalgia con su diseño auténtico. Una pieza clásica para cualquier colección.",
+    image: "/images/televisor-claro.jpg",
+    category: "Electrodomésticos",
+    stars: 4,
+  },
+  {
+    id: "UUID-012",
+    name: "Radio Rosa HeartBeat Retro FM",
+    price: 50,
+    description: "Diseño vibrante y funcional.",
+    detail:
+      "La radio rosa HeartBeat combina estilo retro con funcionalidad moderna. Perfecta para los amantes de lo clásico.",
+    image: "/images/radio-rosa.jpg",
+    category: "Audio",
+    stars: 3,
+  },
+  {
+    id: "UUID-014",
+    name: "Celular Phone Radio Phone Retro 80s",
+    price: 100,
+    description: "Teléfono clásico de los 80.",
+    detail:
+      "El Radio Phone de los 80 es un clásico atemporal que combina diseño nostálgico con funcionalidad básica.",
+    image: "/images/telefo.jpg",
+    category: "Telefonía",
+    stars: 4,
+  },
+  {
     id: "UUID-001",
     name: "Tocadiscos Crosley Discovery",
     price: 120,
@@ -101,39 +134,6 @@ export const products: Product[] = [
     stars: 5,
   },
   {
-    id: "UUID-011",
-    name: "Televisor de los años 90",
-    price: 150,
-    description: "Televisor clásico con antena y roscas.",
-    detail:
-      "El televisor de los años 90 evoca nostalgia con su diseño auténtico. Una pieza clásica para cualquier colección.",
-    image: "/images/televisor-claro.jpg",
-    category: "Electrodomésticos",
-    stars: 4,
-  },
-  {
-    id: "UUID-012",
-    name: "Radio Rosa HeartBeat Retro FM",
-    price: 50,
-    description: "Diseño vibrante y funcional.",
-    detail:
-      "La radio rosa HeartBeat combina estilo retro con funcionalidad moderna. Perfecta para los amantes de lo clásico.",
-    image: "/images/radio-rosa.jpg",
-    category: "Audio",
-    stars: 3,
-  },
-  {
-    id: "UUID-014",
-    name: "Celular Phone Radio Phone Retro 80s",
-    price: 100,
-    description: "Teléfono clásico de los 80.",
-    detail:
-      "El Radio Phone de los 80 es un clásico atemporal que combina diseño nostálgico con funcionalidad básica.",
-    image: "/images/telefo.jpg",
-    category: "Telefonía",
-    stars: 4,
-  },
-  {
     id: "UUID-013",
     name: "Calculadora Retro Datamath",
     price: 25,
@@ -142,6 +142,41 @@ export const products: Product[] = [
       "La calculadora retro Datamath es un recuerdo nostálgico de una época en que la tecnología era simple y efectiva.",
     image: "/images/calculadora.jpg",
     category: "Oficina",
+    stars: 3,
+  },
+
+  {
+    id: "UUID-017",
+    name: "Cassete Space Girl Retro",
+    price: 30,
+    description: "Cassette de edición limitada con música vintage.",
+    detail:
+      "El cassette Space Girl Retro es una pieza de colección para quienes aman la música retro y los objetos vintage.",
+    image: "/images/cassteSpace.jpg",
+    category: "Audio",
+    stars: 5,
+  },
+
+  {
+    id: "UUID-020",
+    name: "Walkman Retro con Auriculares Grandes",
+    price: 95,
+    description: "Walkman de marca alternativa con auriculares grandes.",
+    detail:
+      "Este Walkman con auriculares grandes es ideal para quienes aman la música retro con estilo.",
+    image: "/images/walk.jpg",
+    category: "Audio",
+    stars: 4,
+  },
+  {
+    id: "UUID-021",
+    name: "Sony Watchman Voyager",
+    price: 250,
+    description: "Televisor portátil de los años 90 con pantalla pequeña.",
+    detail:
+      "El Sony Watchman Voyager es un televisor portátil retro que te permite ver televisión en cualquier lugar.",
+    image: "/images/voyager.jpg",
+    category: "Electrodomésticos",
     stars: 3,
   },
   {
@@ -155,9 +190,6 @@ export const products: Product[] = [
     category: "Audio",
     stars: 5,
   },
-
-  // Nuevos productos de Fotografía
-
   {
     id: "UUID-016",
     name: "Cámara Cannon Verde",
@@ -168,17 +200,6 @@ export const products: Product[] = [
     image: "/images/canonVerde.jpg",
     category: "Fotografía",
     stars: 4,
-  },
-  {
-    id: "UUID-017",
-    name: "Cassete Space Girl Retro",
-    price: 30,
-    description: "Cassette de edición limitada con música vintage.",
-    detail:
-      "El cassette Space Girl Retro es una pieza de colección para quienes aman la música retro y los objetos vintage.",
-    image: "/images/cassteSpace.jpg",
-    category: "Audio",
-    stars: 5,
   },
   {
     id: "UUID-018",
@@ -202,28 +223,6 @@ export const products: Product[] = [
     image: "/images/MaquinaOlivetti.jpg",
     category: "Oficina",
     stars: 5,
-  },
-  {
-    id: "UUID-020",
-    name: "Walkman Retro con Auriculares Grandes",
-    price: 95,
-    description: "Walkman de marca alternativa con auriculares grandes.",
-    detail:
-      "Este Walkman con auriculares grandes es ideal para quienes aman la música retro con estilo.",
-    image: "/images/walk.jpg",
-    category: "Audio",
-    stars: 4,
-  },
-  {
-    id: "UUID-021",
-    name: "Sony Watchman Voyager",
-    price: 250,
-    description: "Televisor portátil de los años 90 con pantalla pequeña.",
-    detail:
-      "El Sony Watchman Voyager es un televisor portátil retro que te permite ver televisión en cualquier lugar.",
-    image: "/images/voyager.jpg",
-    category: "Electrodomésticos",
-    stars: 3,
   },
   {
     id: "UUID-022",

@@ -42,14 +42,29 @@ export default function ProductCard({
         <div>
           <div className="p-2">
             <div className="mb-2">
-              <p className="block font-sans text-base font-medium text-blue-gray-900">
+              <p
+                className="block font-sans text-base font-medium text-blue-gray-900 truncate"
+                style={{ height: "24px" }}
+              >
                 {name}
               </p>
-              <p className="block font-sans text-base font-medium text-blue-gray-900 mt-1">
+              <p
+                className="block font-sans text-base font-medium text-blue-gray-900 mt-1 truncate"
+                style={{ height: "24px" }}
+              >
                 ${price}
               </p>
             </div>
-            <p className="block font-sans text-sm text-gray-700 opacity-75">
+            <p
+              className="block font-sans text-sm text-gray-700 opacity-75 line-clamp-2"
+              style={{
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
               {description}
             </p>
           </div>
