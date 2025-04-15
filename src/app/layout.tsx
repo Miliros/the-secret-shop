@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { CartProvider } from "@/components/cart/CartContext";
+import Footer from "@/components/Footer"; // Asegúrate de importar tu componente Footer
 
 export const metadata: Metadata = {
   title: "The Secret Shop",
@@ -18,6 +19,7 @@ export default function RootLayout({
         <CartProvider>
           <main>{children}</main>
         </CartProvider>
+        <Footer /> {/* Aquí colocas el Footer */}
       </body>
     </html>
   );
