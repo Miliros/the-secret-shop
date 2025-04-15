@@ -37,7 +37,8 @@ const Cart = () => {
               </div>
             </dl>
             <p className="mt-1 text-sm text-gray-500">
-              Shipping and taxes will be calculated at checkout.
+              Los gastos de envío y los impuestos se calcularán al momento del
+              pago.{" "}
             </p>
           </div>
 
@@ -46,19 +47,19 @@ const Cart = () => {
               type="submit"
               className="w-full border border-transparent bg-black px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-amber-900 focus:outline-none focus:ring-2 focus:ring-amber-900 focus:ring-offset-2 focus:ring-offset-gray-50"
             >
-              Checkout
+              Confirmar
             </button>
           </div>
 
           <div className="mt-6 text-center text-sm w-full max-w-md">
             <p>
-              or
+              o
               <Link
                 href={"/"}
                 onClick={toggleCart}
                 className="font-medium text-black hover:text-amber-900 m-1"
               >
-                Continue Shopping
+                Continua comprando
                 <span aria-hidden="true"> &rarr;</span>
               </Link>
             </p>

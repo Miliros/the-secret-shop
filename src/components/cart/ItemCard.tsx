@@ -24,12 +24,12 @@ export const ItemCard = ({ product, quantity }: Props) => {
       </div>
 
       <div className="px-2 pb-5 w-full flex flex-col mt-2">
-        <h3 className="font-bold text-xl tracking-tight text-black">
+        <p className="font-bold text-base tracking-tight text-[#3E2723]">
           {product.name}
           <small className="text-xs p-2 text-gray-700">
             ${product.price.toFixed(2)}
           </small>
-        </h3>
+        </p>
 
         <div className="flex flex-col items-start justify-between">
           <span className="text-gray-900 text-sm">Cantidad: {quantity}</span>

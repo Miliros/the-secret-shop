@@ -18,7 +18,6 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
       <div className="fixed inset-0 " onClick={onClose} />
       <div className="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-lg p-6 flex flex-col">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-semibold">Your Cart</h2>
           <button onClick={onClose}>
             <HiOutlineX size={24} />
           </button>

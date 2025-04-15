@@ -77,7 +77,7 @@ export default function ProductCard({
                 handleAddToCart();
               }}
             >
-              Add to Cart
+              Agregar al carrito
             </button>
           </div>
         </div>

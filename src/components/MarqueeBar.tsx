@@ -2,8 +2,7 @@
 
 const MarqueeBar: React.FC = () => {
   const text =
-    "Free Shipping on Orders Over $50 · New Arrivals In Stock · Shop Now";
-
+    "Envío gratuito en pedidos superiores a $50 · Novedades en stock · Comprar ahora";
   return (
     <div className="w-full bg-black py-2">
       <div className="overflow-hidden whitespace-nowrap relative">

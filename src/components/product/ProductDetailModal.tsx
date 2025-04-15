@@ -41,10 +41,10 @@ const ProductDetailModal: FC<ProductDetailModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full p-8 relative border border-black">
+      <div className="bg-white rounded-lg shadow-xl w-full sm:max-w-lg md:max-w-3xl lg:max-w-4xl p-6 relative border border-black overflow-y-auto max-h-[90vh]">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          className="absolute top-4 right-4 text-black hover:text-gray-700"
         >
           ✕
         </button>
@@ -57,7 +57,9 @@ const ProductDetailModal: FC<ProductDetailModalProps> = ({
             className="w-1/2 rounded-lg object-cover"
           />
           <div className="ml-8 w-1/2">
-            <h2 className="text-3xl font-bold text-gray-800">{name}</h2>
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-800 ">
+              {name}
+            </h2>
             <p className="mt-2 text-gray-600">{description}</p>
             <p className="mt-4 text-lg font-semibold text-gray-800">${price}</p>
             <p className="mt-4 text-sm text-gray-600">{detail}</p>
@@ -75,7 +77,7 @@ const ProductDetailModal: FC<ProductDetailModalProps> = ({
                 }}
                 className="w-full py-3 px-4 bg-black text-white font-bold hover:bg-[#3E2723]"
               >
-                Add to Cart
+                Agregar al carrito
               </button>
             </div>
           </div>
