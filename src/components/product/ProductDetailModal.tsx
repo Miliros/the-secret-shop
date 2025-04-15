@@ -41,23 +41,23 @@ const ProductDetailModal: FC<ProductDetailModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="bg-white rounded-lg shadow-xl w-full sm:max-w-lg md:max-w-3xl lg:max-w-4xl p-6 relative border border-black overflow-y-auto max-h-[90vh]">
+      <div className="bg-white rounded-lg shadow-xl w-full max-w-[90%] sm:max-w-lg md:max-w-3xl lg:max-w-4xl p-6 relative border border-black overflow-y-auto max-h-[90vh]">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-black hover:text-gray-700"
+          className="absolute top-2 right-4 text-black hover:text-gray-700"
         >
           ✕
         </button>
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           <Image
             src={image}
             alt="Product Image"
             width={400}
             height={400}
-            className="w-1/2 rounded-lg object-cover"
+            className="w-full sm:w-1/2 rounded-lg object-cover sm:h-auto h-64"
           />
-          <div className="ml-8 w-1/2">
-            <h2 className="text-3xl sm:text-5xl font-bold text-gray-800 ">
+          <div className="sm:ml-8 sm:w-1/2">
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-800 mt-4 sm:mt-0">
               {name}
             </h2>
             <p className="mt-2 text-gray-600">{description}</p>

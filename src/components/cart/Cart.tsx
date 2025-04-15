@@ -10,7 +10,7 @@ const Cart = () => {
   return (
     <div className="flex flex-col justify-center p-0">
       <h1 className="hidden mt-4 text-xl font-bold text-gray-800 lg:block mb-2">
-        PRODUCTS CART
+        CARRITO
       </h1>
       <hr className="mb-5" />
 
@@ -23,10 +23,6 @@ const Cart = () => {
           aria-labelledby="summary-heading"
           className="w-full mt-10 flex flex-col items-center"
         >
-          <h2 id="summary-heading" className="sr-only">
-            Order summary
-          </h2>
-
           <div className="w-full max-w-md">
             <dl className="space-y-4">
               <div className="flex items-center justify-between">
