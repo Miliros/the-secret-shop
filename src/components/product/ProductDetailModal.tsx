@@ -2,16 +2,19 @@
 
 import { FC } from "react";
 import Image from "next/image";
+import { Star } from "lucide-react";
 
 interface ProductDetailModalProps {
   id: string;
   name: string;
-  price: number;
   description: string;
+  price: number;
   detail: string;
   image: string;
+  stars: number;
   onClose: () => void;
   onAddToCart: () => void;
+  category?: string;
 }
 
 const ProductDetailModal: FC<ProductDetailModalProps> = ({
@@ -20,12 +23,25 @@ const ProductDetailModal: FC<ProductDetailModalProps> = ({
   description,
   detail,
   image,
+  stars,
+  category,
   onClose,
   onAddToCart,
 }) => {
+  const renderStars = (stars: number) => {
+    return Array.from({ length: 5 }, (_, index) => (
+      <Star
+        key={index}
+        className={`h-5 w-5 ${
+          index < stars ? "text-yellow-400" : "text-gray-300"
+        }`}
+      />
+    ));
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full p-8 relative  border border-black">
+      <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full p-8 relative border border-black">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
@@ -45,13 +61,19 @@ const ProductDetailModal: FC<ProductDetailModalProps> = ({
             <p className="mt-2 text-gray-600">{description}</p>
             <p className="mt-4 text-lg font-semibold text-gray-800">${price}</p>
             <p className="mt-4 text-sm text-gray-600">{detail}</p>
+            {category && (
+              <p className="mt-4 text-sm font-medium text-gray-500">
+                <span className="text-gray-900">{category}</span>
+              </p>
+            )}
+            <div className="mt-4 flex items-center">{renderStars(stars)}</div>
             <div className="mt-6">
               <button
                 onClick={() => {
                   onAddToCart();
                   onClose();
                 }}
-                className="w-full py-3 px-4 bg-black text-white font-bold  hover:bg-[#3E2723]"
+                className="w-full py-3 px-4 bg-black text-white font-bold hover:bg-[#3E2723]"
               >
                 Add to Cart
               </button>
