@@ -155,4 +155,85 @@ export const products: Product[] = [
     category: "Audio",
     stars: 5,
   },
+
+  // Nuevos productos de Fotografía
+
+  {
+    id: "UUID-016",
+    name: "Cámara Cannon Verde",
+    price: 250,
+    description: "Cámara fotográfica vintage con diseño verde único.",
+    detail:
+      "La cámara Cannon Verde es perfecta para los fotógrafos que buscan un diseño retro con tecnología moderna.",
+    image: "/images/canonVerde.jpg",
+    category: "Fotografía",
+    stars: 4,
+  },
+  {
+    id: "UUID-017",
+    name: "Cassete Space Girl Retro",
+    price: 30,
+    description: "Cassette de edición limitada con música vintage.",
+    detail:
+      "El cassette Space Girl Retro es una pieza de colección para quienes aman la música retro y los objetos vintage.",
+    image: "/images/cassteSpace.jpg",
+    category: "Audio",
+    stars: 5,
+  },
+  {
+    id: "UUID-018",
+    name: "Micrófono Antiguo Año 98",
+    price: 120,
+    description:
+      "Micrófono vintage de los años 90, ideal para grabaciones retro.",
+    detail:
+      "Este micrófono antiguo es perfecto para los amantes de la tecnología de grabación clásica.",
+    image: "/images/micro98.jpg",
+    category: "Audio",
+    stars: 4,
+  },
+  {
+    id: "UUID-019",
+    name: "Máquina de Escribir Olivetti 1800",
+    price: 180,
+    description: "Máquina de escribir vintage en perfecto estado.",
+    detail:
+      "La Olivetti 1800 es una máquina de escribir que evoca nostalgia por los días de la escritura manual.",
+    image: "/images/MaquinaOlivetti.jpg",
+    category: "Oficina",
+    stars: 5,
+  },
+  {
+    id: "UUID-020",
+    name: "Walkman Retro con Auriculares Grandes",
+    price: 95,
+    description: "Walkman de marca alternativa con auriculares grandes.",
+    detail:
+      "Este Walkman con auriculares grandes es ideal para quienes aman la música retro con estilo.",
+    image: "/images/walk.jpg",
+    category: "Audio",
+    stars: 4,
+  },
+  {
+    id: "UUID-021",
+    name: "Sony Watchman Voyager",
+    price: 250,
+    description: "Televisor portátil de los años 90 con pantalla pequeña.",
+    detail:
+      "El Sony Watchman Voyager es un televisor portátil retro que te permite ver televisión en cualquier lugar.",
+    image: "/images/voyager.jpg",
+    category: "Electrodomésticos",
+    stars: 3,
+  },
+  {
+    id: "UUID-022",
+    name: "Sony Grabador y Reproductor de CD",
+    price: 200,
+    description: "Reproductor de CD de la marca Sony con grabadora integrada.",
+    detail:
+      "Este Sony Grabador y Reproductor de CD es ideal para los amantes de la música retro y los coleccionistas.",
+    image: "/images/sonyCD.jpg",
+    category: "Audio",
+    stars: 5,
+  },
 ];
