@@ -32,11 +32,7 @@ export const CartProvider: React.FC<React.PropsWithChildren<{}>> = ({
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      Cookies.set("cart", JSON.stringify(cart), { expires: 7 });
-    }, 300);
-
-    return () => clearTimeout(timer);
+    Cookies.set("cart", JSON.stringify(cart), { expires: 7 });
   }, [cart]);
 
   const addProduct = (id: string) => {
@@ -55,7 +51,10 @@ export const CartProvider: React.FC<React.PropsWithChildren<{}>> = ({
   };
 
   const removeProduct = (id: string) => {
-    setCart((prevCart) => prevCart.filter((product) => product.id !== id));
+    setCart((prevCart) => {
+      const newCart = prevCart.filter((product) => product.id !== id);
+      return newCart;
+    });
   };
 
   const getTotalCount = () => {
@@ -63,7 +62,6 @@ export const CartProvider: React.FC<React.PropsWithChildren<{}>> = ({
   };
 
   const toggleCart = () => {
-    console.log("Toggling cart");
     setIsCartOpen((prev) => !prev);
   };
 

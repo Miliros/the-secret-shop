@@ -1,29 +1,11 @@
-"use client";
-
-import { useCart } from "./CartContext";
-import { Product, products } from "@/utils/productData";
+import { useProductsInCart } from "@/components/hooks/useProductsInCart";
 import { ItemCard } from "@/components/ItemCard";
+import { useCart } from "./CartContext";
 import Link from "next/link";
 
-interface ProductInCart {
-  product: Product;
-  quantity: number;
-}
-
 const Cart = () => {
-  const { cart, toggleCart } = useCart();
-
-  const productsInCart = cart
-    .map(({ id, quantity }) => {
-      const product = products.find((prod) => prod.id === id);
-      return product ? { product, quantity } : null;
-    })
-    .filter(Boolean) as ProductInCart[];
-
-  const totalToPay = productsInCart.reduce(
-    (prev, current) => current.product.price * current.quantity + prev,
-    0
-  );
+  const { productsInCart, totalToPay } = useProductsInCart();
+  const { toggleCart } = useCart();
 
   return (
     <div className="flex flex-col justify-center p-0">
