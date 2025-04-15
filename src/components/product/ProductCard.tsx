@@ -28,7 +28,7 @@ export default function ProductCard({
     <>
       <div
         onClick={toggleModal}
-        className="w-max max-w-xs bg-white border border-gray-200 rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+        className="w-[300px]  bg-white border border-gray-200 rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
       >
         <Image
           src={image}

@@ -5,9 +5,16 @@ import { CiSearch, CiMenuBurger } from "react-icons/ci";
 import { HiOutlineShoppingBag, HiOutlineLogout } from "react-icons/hi";
 import { useCart } from "@/components/cart/CartContext";
 import CartModal from "@/components/cart/CartModal";
+import { useState } from "react";
 
 export default function NavBar() {
   const { getTotalCount, isCartOpen, toggleCart } = useCart();
+
+  // Estado para controlar si el menú móvil está abierto o cerrado
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Función para alternar el estado del menú
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <>
@@ -15,12 +22,20 @@ export default function NavBar() {
         <div className="px-6 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 sm:space-x-4">
           <div className="flex items-center justify-between w-full sm:w-auto">
             <h5 className="text-2xl font-semibold">Old School Tech</h5>
-            <button className="w-12 h-12 lg:hidden">
+            <button
+              className="w-12 h-12 lg:hidden"
+              onClick={toggleMenu} // Función toggle para el menú
+            >
               <CiMenuBurger size={30} />
             </button>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center w-full sm:w-auto space-y-4 sm:space-y-0 sm:space-x-4 mt-4 sm:mt-0 lg:flex">
+          {/* Menú de navegación con clases de visibilidad */}
+          <div
+            className={`${
+              isMenuOpen ? "block" : "hidden"
+            } flex-col sm:flex sm:flex-row items-center w-full sm:w-auto space-y-4 sm:space-y-0 sm:space-x-4 mt-4 sm:mt-0 lg:flex`}
+          >
             <div className="relative w-full sm:w-48">
               <input
                 type="text"
@@ -44,12 +59,12 @@ export default function NavBar() {
               <HiOutlineShoppingBag size={22} />
             </button>
 
-            <Link
-              href={"/logout"}
-              className="flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
+            <button
+              // href={"/logout"}
+              className="relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
             >
               <HiOutlineLogout size={22} />
-            </Link>
+            </button>
           </div>
         </div>
       </div>
