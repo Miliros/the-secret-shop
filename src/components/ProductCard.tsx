@@ -1,62 +1,91 @@
 "use client";
 
 import { useCart } from "./CartContext";
-
+import { useState } from "react";
 import Image from "next/image";
+import ProductDetailModal from "./ProductDetailModal";
 
 interface Props {
   id: string;
   name: string;
   price: number;
   description: string;
+  detail: string;
   image: string;
 }
 
-export function ProductCard({ id, name, description, price, image }: Props) {
+export function ProductCard({
+  id,
+  name,
+  description,
+  price,
+  detail,
+  image,
+}: Props) {
   const { addProduct, toggleCart } = useCart();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleAddToCart = () => {
     addProduct(id);
     toggleCart();
   };
 
-  return (
-    <div className="w-max max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-0">
-      <Image
-        src={image}
-        alt="image product"
-        width={300}
-        height={300}
-        className="w-full rounded-t-lg object-cover"
-      />
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
 
-      <div>
-        <div className="p-2">
-          <div className="mb-2">
-            <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-              {name}
-            </p>
-            <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased mt-1">
-              ${price}
-            </p>
-          </div>
-          <div className="flex items-center justify-between">
-            <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+  return (
+    <>
+      <div
+        onClick={toggleModal}
+        className="w-max max-w-xs bg-white border border-gray-200 rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+      >
+        <Image
+          src={image}
+          alt="image product"
+          width={300}
+          height={300}
+          className="w-full rounded-t-lg object-cover"
+        />
+        <div>
+          <div className="p-2">
+            <div className="mb-2">
+              <p className="block font-sans text-base font-medium text-blue-gray-900">
+                {name}
+              </p>
+              <p className="block font-sans text-base font-medium text-blue-gray-900 mt-1">
+                ${price}
+              </p>
+            </div>
+            <p className="block font-sans text-sm text-gray-700 opacity-75">
               {description}
             </p>
           </div>
-        </div>
-
-        <div className="p-2 pt-0">
-          <button
-            className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-            type="button"
-            onClick={handleAddToCart}
-          >
-            Add to Cart
-          </button>
+          <div className="p-2 pt-0">
+            <button
+              className="block w-full rounded-lg bg-blue-gray-900/10 py-3 px-4 text-blue-gray-900 font-bold uppercase transition-all hover:scale-105 focus:scale-105"
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleAddToCart();
+              }}
+            >
+              Add to Cart
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+
+      {isModalOpen && (
+        <ProductDetailModal
+          id={id}
+          name={name}
+          description={description}
+          price={price}
+          detail={detail}
+          image={image}
+          onClose={toggleModal}
+          onAddToCart={handleAddToCart}
+        />
+      )}
+    </>
   );
 }

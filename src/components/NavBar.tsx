@@ -32,7 +32,6 @@ export default function NavBar() {
               </div>
             </div>
 
-            {/* Botón del carrito con contador */}
             <button
               onClick={toggleCart}
               className="relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
@@ -55,7 +54,6 @@ export default function NavBar() {
         </div>
       </div>
 
-      {/* Modal del carrito */}
       <CartModal isOpen={isCartOpen} onClose={toggleCart} />
     </>
   );
