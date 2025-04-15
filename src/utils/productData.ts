@@ -9,6 +9,8 @@ export const products: Product[] = [
     detail:
       "Este tocadiscos Crosley Discovery, de color claro, combina un diseño vintage con tecnología moderna, ideal para los amantes de la música y la decoración retro.",
     image: "/images/TocadCrosley.jpg",
+    category: "Audio",
+    stars: 4,
   },
   {
     id: "UUID-003",
@@ -18,6 +20,8 @@ export const products: Product[] = [
     detail:
       "La cámara Samsung Kenox IP 140 marcó una era en la fotografía digital. Ganadora de premios internacionales, es un ícono de los años 90.",
     image: "/images/camSansung.jpg",
+    category: "Fotografía",
+    stars: 5,
   },
   {
     id: "UUID-004",
@@ -27,8 +31,9 @@ export const products: Product[] = [
     detail:
       "Esta computadora Windows 1998 ofrece una experiencia retro única, perfecta para coleccionistas o entusiastas de la tecnología vintage.",
     image: "/images/98.jpg",
+    category: "Computación",
+    stars: 3,
   },
-
   {
     id: "UUID-002",
     name: "Auriculares Rock Nation",
@@ -37,6 +42,8 @@ export const products: Product[] = [
     detail:
       "Auriculares Rock Nation con un aspecto vintage inconfundible. Perfectos para los nostálgicos que buscan calidad y estilo en un solo producto.",
     image: "/images/auricularesMarrones.jpg",
+    category: "Audio",
+    stars: 4,
   },
   {
     id: "UUID-005",
@@ -46,6 +53,8 @@ export const products: Product[] = [
     detail:
       "El Walkman Sony plateado revolucionó la música portátil. Su diseño compacto y duradero lo hace perfecto para cualquier amante de la música retro.",
     image: "/images/walkmanSony.jpg",
+    category: "Audio",
+    stars: 5,
   },
   {
     id: "UUID-009",
@@ -55,8 +64,9 @@ export const products: Product[] = [
     detail:
       "La Olympus Retro es ideal para fotógrafos que buscan autenticidad en sus tomas y valoran el diseño clásico.",
     image: "/images/olymp.jpg",
+    category: "Fotografía",
+    stars: 4,
   },
-
   {
     id: "UUID-006",
     name: "Disquete Negro",
@@ -65,6 +75,8 @@ export const products: Product[] = [
     detail:
       "El disquete negro fue esencial para el almacenamiento portátil en su época. Ideal para colecciones de objetos tecnológicos históricos.",
     image: "/images/slide).jpg",
+    category: "Computación",
+    stars: 3,
   },
   {
     id: "UUID-007",
@@ -74,6 +86,8 @@ export const products: Product[] = [
     detail:
       "La cámara Exacta Varex Ilb es una joya de la fotografía clásica, perfecta para exhibiciones o proyectos retro.",
     image: "/images/slide11.jpg",
+    category: "Fotografía",
+    stars: 5,
   },
   {
     id: "UUID-008",
@@ -83,8 +97,9 @@ export const products: Product[] = [
     detail:
       "El Apple Macintosh marcó un antes y un después en la informática personal. Perfecto para entusiastas de Apple y coleccionistas.",
     image: "/images/apple.jpg",
+    category: "Computación",
+    stars: 5,
   },
-
   {
     id: "UUID-011",
     name: "Televisor de los años 90",
@@ -93,6 +108,8 @@ export const products: Product[] = [
     detail:
       "El televisor de los años 90 evoca nostalgia con su diseño auténtico. Una pieza clásica para cualquier colección.",
     image: "/images/televisor-claro.jpg",
+    category: "Electrodomésticos",
+    stars: 4,
   },
   {
     id: "UUID-012",
@@ -102,6 +119,8 @@ export const products: Product[] = [
     detail:
       "La radio rosa HeartBeat combina estilo retro con funcionalidad moderna. Perfecta para los amantes de lo clásico.",
     image: "/images/radio-rosa.jpg",
+    category: "Audio",
+    stars: 3,
   },
   {
     id: "UUID-014",
@@ -111,9 +130,9 @@ export const products: Product[] = [
     detail:
       "El Radio Phone de los 80 es un clásico atemporal que combina diseño nostálgico con funcionalidad básica.",
     image: "/images/telefo.jpg",
+    category: "Telefonía",
+    stars: 4,
   },
-
-  // Fila 5 (Horizontales)
   {
     id: "UUID-013",
     name: "Calculadora Retro Datamath",
@@ -122,6 +141,8 @@ export const products: Product[] = [
     detail:
       "La calculadora retro Datamath es un recuerdo nostálgico de una época en que la tecnología era simple y efectiva.",
     image: "/images/calculadora.jpg",
+    category: "Oficina",
+    stars: 3,
   },
   {
     id: "UUID-015",
@@ -131,5 +152,7 @@ export const products: Product[] = [
     detail:
       "El cassette Romance Retro es una joya para los amantes de la música vintage. Ideal para recordar épocas pasadas.",
     image: "/images/cassette.jpg",
+    category: "Audio",
+    stars: 5,
   },
 ];
