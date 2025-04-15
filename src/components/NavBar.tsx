@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { CiSearch, CiMenuBurger } from "react-icons/ci";
 import { HiOutlineShoppingBag, HiOutlineLogout } from "react-icons/hi";
-import { useCart } from "@/components/CartContext";
-import CartModal from "@/components/CartModal";
+import { useCart } from "@/components/cart/CartContext";
+import CartModal from "@/components/cart/CartModal";
 
 export default function NavBar() {
   const { getTotalCount, isCartOpen, toggleCart } = useCart();

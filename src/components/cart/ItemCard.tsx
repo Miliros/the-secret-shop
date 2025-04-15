@@ -1,7 +1,7 @@
 import { MdDeleteOutline, MdAddCircleOutline } from "react-icons/md";
 import Image from "next/image";
-import { Product } from "../types/types";
-import { useCartActions } from "../components/hooks/useCartActions";
+import { Product } from "../../types/types";
+import { useCartActions } from "../hooks/useCartActions";
 
 interface Props {
   product: Product;

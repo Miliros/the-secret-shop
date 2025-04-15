@@ -1,4 +1,4 @@
-import { useCart } from "../CartContext";
+import { useCart } from "../cart/CartContext";
 import { products } from "@/utils/productData";
 import { Product } from "@/types/types";
 
