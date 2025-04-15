@@ -1,52 +1,43 @@
 "use client";
 
-import Link from "next/link";
-import { CiSearch, CiMenuBurger } from "react-icons/ci";
+import { RiMenuSearchLine } from "react-icons/ri";
 import { HiOutlineShoppingBag, HiOutlineLogout } from "react-icons/hi";
 import { useCart } from "@/components/cart/CartContext";
 import CartModal from "@/components/cart/CartModal";
 import { useState } from "react";
+import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
 
 export default function NavBar() {
   const { getTotalCount, isCartOpen, toggleCart } = useCart();
-
-  // Estado para controlar si el menú móvil está abierto o cerrado
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Función para alternar el estado del menú
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const handleLogout = () => {
+    // Eliminar la cookie 'userSession'
+    Cookies.remove("userSession");
+    // Redirigir al login
+    router.push("/login");
+  };
 
   return (
     <>
-      <div className="sticky z-10 top-0 h-auto border-b bg-white lg:py-2.5">
-        <div className="px-6 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 sm:space-x-4">
+      <div className="sticky z-10 top-0 h-auto border-b lg:py-2.5 bg-white">
+        <div className="px-4 lg:px-6 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 sm:space-x-4">
           <div className="flex items-center justify-between w-full sm:w-auto">
             <h5 className="text-2xl font-semibold">Old School Tech</h5>
-            <button
-              className="w-12 h-12 lg:hidden"
-              onClick={toggleMenu} // Función toggle para el menú
-            >
-              <CiMenuBurger size={30} />
+            <button className="w-12 h-12 lg:hidden" onClick={toggleMenu}>
+              <RiMenuSearchLine size={34} />
             </button>
           </div>
 
-          {/* Menú de navegación con clases de visibilidad */}
           <div
             className={`${
-              isMenuOpen ? "block" : "hidden"
-            } flex-col sm:flex sm:flex-row items-center w-full sm:w-auto space-y-4 sm:space-y-0 sm:space-x-4 mt-4 sm:mt-0 lg:flex`}
+              isMenuOpen ? "flex flex-row space-x-4" : "hidden"
+            } sm:flex sm:flex-row items-center w-full sm:w-auto space-y-0 m-4 sm:mt-0 lg:space-x-4`}
           >
-            <div className="relative w-full sm:w-48">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-full outline-none transition-all border-gray-300"
-              />
-              <div className="absolute inset-y-0 left-0 flex items-center pl-3">
-                <CiSearch className="text-gray-400" />
-              </div>
-            </div>
-
             <button
               onClick={toggleCart}
               className="relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
@@ -60,7 +51,7 @@ export default function NavBar() {
             </button>
 
             <button
-              // href={"/logout"}
+              onClick={handleLogout}
               className="relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
             >
               <HiOutlineLogout size={22} />

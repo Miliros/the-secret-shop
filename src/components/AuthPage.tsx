@@ -30,14 +30,20 @@ export default function AuthPage() {
       );
       return;
     }
+
     Cookies.set("userSession", JSON.stringify({ email }), { expires: 1 });
 
     router.push("/");
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#ebe9e2]">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96">
+    <div
+      className="flex items-center justify-center min-h-screen bg-cover bg-center"
+      style={{
+        backgroundImage: "url('images/bg.jpg')",
+      }}
+    >
+      <div className="bg-[#f9f9f9] p-12 rounded-lg shadow-lg w-96 border border-gray-200">
         <h2 className="text-2xl font-bold text-[#333333] text-center mb-4">
           Iniciar Sesión
         </h2>
@@ -54,7 +60,7 @@ export default function AuthPage() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-2 rounded bg-[#F7F7F7] border border-[#808080] focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
+              className="w-full p-2 rounded border border-black focus:outline-none focus:border-black"
               placeholder="Tu email"
             />
           </div>
@@ -70,14 +76,14 @@ export default function AuthPage() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-2 rounded bg-[#F7F7F7] border border-[#808080] focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
+              className="w-full p-2 rounded border border-black focus:outline-none focus:border-black"
               placeholder="Tu contraseña"
             />
           </div>
           {error && <p className="text-[#D9534F] text-sm">{error}</p>}
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-[#ff6b35a2] hover:bg-[#e65100a8] text-white font-bold rounded"
+            className="w-full py-2 px-4 bg-black text-white font-bold border border-black focus:outline-none focus:border-black hover:bg-gray-100 hover:text-black cursor-pointer"
           >
             Iniciar Sesión
           </button>
