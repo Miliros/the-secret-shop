@@ -1,7 +1,7 @@
 "use client";
 
-import { addProductToCart } from "./action";
-import { useRouter } from "next/navigation";
+import { useCart } from "./CartContext";
+
 import Image from "next/image";
 
 interface Props {
@@ -13,11 +13,11 @@ interface Props {
 }
 
 export function ProductCard({ id, name, description, price, image }: Props) {
-  const router = useRouter();
+  const { addProduct, toggleCart } = useCart();
 
-  const onAddToCart = () => {
-    addProductToCart(id);
-    router.refresh();
+  const handleAddToCart = () => {
+    addProduct(id);
+    toggleCart();
   };
 
   return (
@@ -51,7 +51,7 @@ export function ProductCard({ id, name, description, price, image }: Props) {
           <button
             className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="button"
-            onClick={onAddToCart}
+            onClick={handleAddToCart}
           >
             Add to Cart
           </button>
