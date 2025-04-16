@@ -69,6 +69,7 @@ Filtrado por categoría y rango de precios.
 Muestra un mensaje informativo si no hay coincidencias.
 
 -Detalles del producto:
+## si se selecciona una tarjeta de producto te lleva al detalle
 
 Modal con información ampliada:
 
