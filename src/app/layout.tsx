@@ -15,6 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        <link rel="icon" href="/logo.ico" />
+      </head>
       <body>
         <CartProvider>
           <main>{children}</main>

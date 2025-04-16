@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image"; // Importar Image de Next.js
+import Image from "next/image";
 import { RiMenuSearchLine } from "react-icons/ri";
 import { HiOutlineShoppingBag, HiOutlineLogout } from "react-icons/hi";
 import { useCart } from "@/components/cart/CartContext";
