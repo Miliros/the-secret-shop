@@ -1,10 +1,11 @@
 import AuthPage from "@/components/AuthPage";
 
-export const Login = () => {
+const Login = () => {
   return (
     <div>
       <AuthPage />
     </div>
   );
 };
+
 export default Login;
