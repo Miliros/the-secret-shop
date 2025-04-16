@@ -1,15 +1,18 @@
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
     <div className="w-full h-screen bg-[#fbf9f7] flex flex-col items-center">
       <div className="md:h-[15%] sm:h-[8%] h-[8%] md:w-[80%] sm:w-[90%] w-full bg-[#3E2723]"></div>
       <div className="relative -mt-[3rem] flex flex-col items-center">
-        <img
+        <Image
           className="md:w-[28rem] sm:w-[15rem] w-[28rem] h-[15rem] object-cover shadow-lg"
           alt="Profile"
           src="/images/about.jpg"
+          width={500}
+          height={300}
         />
       </div>
       <div className="text-center md:w-[70%] w-[80%] mt-6">
@@ -52,7 +55,7 @@ export default function AboutPage() {
         className="font-semibold text-lg hover:text-[#3E2723] transition-all duration-300"
       >
         Ir a la tienda
-      </Link>{" "}
+      </Link>
     </div>
   );
 }

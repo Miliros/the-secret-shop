@@ -9,9 +9,10 @@ const Cart = () => {
 
   return (
     <div className="flex flex-col justify-center p-0">
-      <h1 className="hidden mt-4 text-xl font-bold text-gray-800 lg:block mb-2">
+      <h1 className="lg:block mt-4 text-xl font-bold text-gray-800 mb-2">
         CARRITO
       </h1>
+
       <hr className="mb-5" />
 
       <div className="flex flex-col gap-2 w-full">

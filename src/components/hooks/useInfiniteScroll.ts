@@ -41,7 +41,7 @@ export const useInfiniteScroll = (
 
   useEffect(() => {
     loadMoreProducts();
-  }, []);
+  }, [loadMoreProducts]);
 
   return { visibleProducts, loadMoreProducts };
 };
