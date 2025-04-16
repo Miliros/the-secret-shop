@@ -46,21 +46,27 @@ export default function NavBar() {
           >
             <button
               onClick={toggleCart}
-              className="relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
+              className="group relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
             >
               {getTotalCount() > 0 && (
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {getTotalCount()}
                 </span>
               )}
-              <HiOutlineShoppingBag size={22} />
+              <HiOutlineShoppingBag
+                size={22}
+                className="text-gray-700 group-hover:text-[#3E2723] group-hover:scale-125 transition-transform duration-300"
+              />
             </button>
 
             <button
               onClick={handleLogout}
-              className="relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
+              className="group relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
             >
-              <HiOutlineLogout size={22} />
+              <HiOutlineLogout
+                size={22}
+                className="text-gray-700 group-hover:text-[#3E2723] group-hover:scale-125 transition-transform duration-300"
+              />
             </button>
           </div>
         </div>
