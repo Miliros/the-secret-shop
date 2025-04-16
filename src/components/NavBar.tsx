@@ -8,6 +8,7 @@ import CartModal from "@/components/cart/CartModal";
 import { useState } from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function NavBar() {
   const { getTotalCount, isCartOpen, toggleCart } = useCart();
@@ -44,30 +45,40 @@ export default function NavBar() {
               isMenuOpen ? "flex flex-row space-x-4" : "hidden"
             } sm:flex sm:flex-row items-center w-full sm:w-auto space-y-0 m-4 sm:mt-0 lg:space-x-4`}
           >
-            <button
-              onClick={toggleCart}
-              className="group relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
-            >
-              {getTotalCount() > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                  {getTotalCount()}
-                </span>
-              )}
-              <HiOutlineShoppingBag
-                size={22}
-                className="text-gray-700 group-hover:text-[#3E2723] group-hover:scale-125 transition-transform duration-300"
-              />
-            </button>
+            <div className="flex items-center">
+              <Link
+                href="/about"
+                className="text-[#3E2723] text-sm hover:text-gray-600"
+              >
+                Nosotros
+              </Link>
+            </div>
+            <div className="flex space-x-2 items-center">
+              <button
+                onClick={toggleCart}
+                className="group relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
+              >
+                {getTotalCount() > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    {getTotalCount()}
+                  </span>
+                )}
+                <HiOutlineShoppingBag
+                  size={22}
+                  className="text-gray-700 group-hover:text-[#3E2723] group-hover:scale-125 transition-transform duration-300"
+                />
+              </button>
 
-            <button
-              onClick={handleLogout}
-              className="group relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
-            >
-              <HiOutlineLogout
-                size={22}
-                className="text-gray-700 group-hover:text-[#3E2723] group-hover:scale-125 transition-transform duration-300"
-              />
-            </button>
+              <button
+                onClick={handleLogout}
+                className="group relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
+              >
+                <HiOutlineLogout
+                  size={22}
+                  className="text-gray-700 group-hover:text-[#3E2723] group-hover:scale-125 transition-transform duration-300"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </div>
