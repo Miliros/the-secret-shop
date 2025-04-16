@@ -97,6 +97,7 @@ Total a pagar actualizado automáticamente.
 -Interfaz amigable:
 
 Modal lateral para mostrar los productos.
+## Page Sobre nosotros que le permite al usuario tambien volver a la tienda
 
 ## Diseño 100% responsivo con transiciones fluidas.
    
@@ -135,7 +136,6 @@ Notificaciones dinámicas:
 
 Alertas cuando un producto esté agotado o agregado al carrito.
 
-Sección "Sobre Nosotros":
 
 Historia de la empresa y misión.
 
