@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![image](https://github.com/user-attachments/assets/ac66e92b-d29b-4d82-9892-92307cd174a6)
 
-## Getting Started
+# Old School Tech Shop
 
-First, run the development server:
+Bienvenido a **Old School Tech Shop**, una tienda en línea que ofrece productos vintage y retro de tecnología clásica. Desde televisores de los años 90 hasta cámaras fotográficas de colección, nuestro objetivo es transportar a los clientes al pasado con piezas exclusivas.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologías utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js (con TypeScript):** Para la creación de la aplicación web.
+- **Tailwind CSS:** Para un diseño responsivo y estilizado.
+- **React:** Para la construcción de componentes reutilizables.
+- **React Icons:** Para incorporar íconos en la interfaz de usuario.
+- **Cookies.js:** Para la persistencia del estado del carrito entre refrescos.
+- **NPM:** Para la gestión de dependencias y ejecución de scripts.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Instalación
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/Miliros/the-secret-shop.git  
+   cd the-secret-shop  
 
-## Learn More
+2. **Instalar las dependencias::**
 
-To learn more about Next.js, take a look at the following resources:
+   npm install
+   npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Abrir el navegador:** Visita http://localhost:3000 para ver la aplicación en acción.
 
-## Deploy on Vercel
+  ** Autenticación y sesiones**
+Inicio de sesión
+El formulario de inicio de sesión valida un correo y una contraseña.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Al autenticarse correctamente, se guarda una cookie userSession que almacena el correo del usuario.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ejemplo:
+
+Correo: prueba@dominio.com
+
+Contraseña: Prueba123!
+
+Gestión de cookies
+Duración de la sesión: 1 día.
+
+Si la cookie userSession no está presente, el usuario es redirigido automáticamente al login.
+
+
+## Funcionalidades implementadas
+-Productos
+Carrusel de productos destacados:
+
+Ubicado encima de la lista de productos.
+
+Muestra productos destacados que cambian automáticamente.
+
+Mejora la experiencia visual al destacar ciertos artículos.
+
+Scroll infinito:
+
+Implementado con un hook personalizado useInfiniteScroll.
+
+Mejora el rendimiento cargando productos progresivamente.
+
+-Filtros dinámicos:
+
+Filtrado por categoría y rango de precios.
+
+Muestra un mensaje informativo si no hay coincidencias.
+
+-Detalles del producto:
+## si se selecciona una tarjeta de producto te lleva al detalle
+
+Modal con información ampliada:
+
+Imagen optimizada con Next.js.
+
+Descripción, precio, categoría y calificación.
+
+Posibilidad de agregar al carrito desde el modal.
+
+-Carrito de compras
+Gestión de productos:
+
+Incrementar o reducir cantidades.
+
+Eliminar productos si la cantidad llega a cero.
+
+Persistencia del carrito:
+
+Estado del carrito almacenado en cookies con js-cookie.
+
+Cálculo dinámico:
+
+Total a pagar actualizado automáticamente.
+
+-Interfaz amigable:
+
+Modal lateral para mostrar los productos.
+
+## Diseño 100% responsivo con transiciones fluidas.
+   
+## Ideas extra implementadas de la consigna
+Funcionalidades incluidas
+Diseño 100% responsivo y Mobile-First:
+
+La aplicación está optimizada para diferentes tamaños de pantalla.
+
+Uso de componentes reutilizables:
+
+Construcción modular siguiendo buenas prácticas en React.
+
+Simulación de productos desde una API:
+
+Los productos son obtenidos de un archivo JSON local simulado.
+
+Scroll infinito:
+
+Mejora el rendimiento y la experiencia del usuario.
+## Mejoras futuras
+Experiencia de usuario
+Modo oscuro:
+
+Agregar un toggle para cambiar entre temas claro y oscuro.
+
+Checkout simulado:
+
+Implementar un formulario con validación y resumen de compra.
+
+Wishlist (Lista de deseos):
+
+Guardar productos para comprarlos más tarde.
+
+Notificaciones dinámicas:
+
+Alertas cuando un producto esté agotado o agregado al carrito.
+
+Sección "Sobre Nosotros":
+
+Historia de la empresa y misión.
+
+Fotos del equipo y testimonios de clientes.
+
+Mapa interactivo con la ubicación de la tienda.
+
+Mejoras técnicas
+Internacionalización:
+
+Traducción del sitio a múltiples idiomas.
+
+SEO avanzado:
+
+Metadatos estructurados para productos y categorías
+
