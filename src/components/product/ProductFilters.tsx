@@ -10,7 +10,7 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({
   onPriceRangeChange,
 }) => {
   return (
-    <div className="flex gap-6 mb-4 w-9/12 md:w-3/12 mx-auto p-2">
+    <div className="flex gap-10 mb-8 w-9/12 md:w-3/12 mx-auto p-2">
       <div className="w-full">
         <label
           htmlFor="category-select"
@@ -67,7 +67,7 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({
           }
         >
           <option value="" className="bg-white hover:text-white">
-            Todos los precios
+            Todos
           </option>
           <option value="[0,50]" className="bg-white hover:text-white">
             $0 - $50

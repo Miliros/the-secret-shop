@@ -33,19 +33,32 @@ const Cart = () => {
                 </dd>
               </div>
             </dl>
-            <p className="mt-1 text-sm text-gray-500">
-              Los gastos de envío y los impuestos se calcularán al momento del
-              pago.{" "}
-            </p>
+            {totalToPay > 0 ? (
+              <p className="mt-1 text-sm text-gray-500">
+                Los gastos de envío y los impuestos se calcularán al momento del
+                pago.
+              </p>
+            ) : (
+              <p className="mt-1 text-sm text-gray-500">
+                Tu carrito esta vacio
+              </p>
+            )}
           </div>
 
           <div className="mt-10 w-full max-w-md">
-            <button
-              type="submit"
-              className="w-full border border-transparent bg-black px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-amber-900 focus:outline-none focus:ring-2 focus:ring-amber-900 focus:ring-offset-2 focus:ring-offset-gray-50"
-            >
-              Confirmar
-            </button>
+            <Link href={"https://www.mercadopago.com.ar/home"} target="_blank">
+              <button
+                type="submit"
+                className={`w-full border border-transparent px-4 py-3 text-base font-medium shadow-sm focus:outline-none focus:ring-offset-2 focus:ring-offset-gray-50 ${
+                  totalToPay === 0
+                    ? "bg-gray-200 cursor-not-allowed"
+                    : "bg-black text-white hover:bg-amber-900"
+                }`}
+                disabled={totalToPay === 0}
+              >
+                Confirmar
+              </button>
+            </Link>
           </div>
 
           <div className="mt-6 text-center text-sm w-full max-w-md">

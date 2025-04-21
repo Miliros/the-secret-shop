@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="w-full h-screen bg-[#fbf9f7] flex flex-col items-center">
+    <div className="w-full h-screen sm:h-[120vh] bg-[#fbf9f7] flex flex-col items-center">
       <div className="md:h-[15%] sm:h-[8%] h-[8%] md:w-[80%] sm:w-[90%] w-full bg-[#3E2723]"></div>
       <div className="relative -mt-[3rem] flex flex-col items-center">
         <Image
@@ -15,11 +15,11 @@ export default function AboutPage() {
           height={300}
         />
       </div>
-      <div className="text-center md:w-[70%] w-[80%] mt-6">
-        <h2 className="sm:text-5xl text-3xl font-serif mt-10">
+      <div className="text-center md:w-[40%] sm:w-[90%] w-full mt-6 px-4">
+        <h2 className="sm:text-4xl text-3xl font-custom font-bold text-[#3E2723] mt-4">
           SOBRE NOSOTROS
         </h2>
-        <p className="text-md mt-6">
+        <p className="text-md mt-4 leading-relaxed">
           Somos Old School Tech Shop, una tienda en línea que ofrece productos
           vintage y retro de tecnología clásica con sede en Argentina. Desde
           televisores de los años 90 hasta cámaras fotográficas de colección,
@@ -27,6 +27,7 @@ export default function AboutPage() {
           exclusivas.
         </p>
       </div>
+
       <div className="flex justify-center items-center py-8 space-x-6">
         <a
           href="https://www.facebook.com"
@@ -52,7 +53,7 @@ export default function AboutPage() {
       </div>
       <Link
         href="/"
-        className="font-semibold text-lg hover:text-[#3E2723] transition-all duration-300"
+        className="font-semibold text-sm hover:text-[#3E2723] transition-all duration-300 animate-titileo"
       >
         Ir a la tienda
       </Link>

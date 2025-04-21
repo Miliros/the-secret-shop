@@ -30,9 +30,9 @@ export default function ProductCard({
     <>
       <div
         onClick={toggleModal}
-        className="bg-white border border-gray-200 rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer flex flex-col h-full min-h-[450px]" // Nueva altura mínima
+        className="bg-white border border-gray-200 rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer flex flex-col h-full min-h-[450px]"
       >
-        <div className="w-full aspect-[4/4] overflow-hidden rounded-t-lg">
+        <div className="w-full aspect-[4/4] overflow-hidden rounded-t-lg ">
           <Image
             src={image}
             alt="image product"

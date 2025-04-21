@@ -9,6 +9,9 @@ module.exports = {
         retroCream: "#F4F4F2",
         retroBrown: "#3E2723",
       },
+      screens: {
+        xs: "320px",
+      },
       fontFamily: {
         custom: ["MyCustomFont", "sans-serif"],
       },

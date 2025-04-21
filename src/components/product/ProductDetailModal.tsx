@@ -48,13 +48,13 @@ const ProductDetailModal: FC<ProductDetailModalProps> = ({
         >
           ✕
         </button>
-        <div className="flex flex-col sm:flex-row">
+        <div className="flex flex-col sm:flex-row ">
           <Image
             src={image}
             alt="Product Image"
             width={400}
             height={400}
-            className="w-full sm:w-1/2 rounded-lg object-cover sm:h-auto h-64"
+            className="w-full sm:w-1/2 rounded-lg object-cover sm:h-auto h-64 max-h-[450px]"
           />
           <div className="sm:ml-8 sm:w-1/2">
             <h2 className="text-3xl sm:text-5xl font-bold text-gray-800 mt-4 sm:mt-0">

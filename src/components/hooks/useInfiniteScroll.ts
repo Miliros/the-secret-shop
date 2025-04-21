@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Product } from "@/types/types";
 
 export const useInfiniteScroll = (
@@ -10,10 +10,11 @@ export const useInfiniteScroll = (
   const [page, setPage] = useState(1);
   const loadingRef = useRef(false);
 
-  const loadMoreProducts = () => {
+  const loadMoreProducts = useCallback(() => {
     if (loadingRef.current || !products || products.length === 0) return;
 
     loadingRef.current = true;
+
     const start = (page - 1) * itemsPerPage;
     const end = page * itemsPerPage;
     const nextProducts = products.slice(start, end);
@@ -22,8 +23,10 @@ export const useInfiniteScroll = (
       setVisibleProducts((prev) => [...prev, ...nextProducts]);
       setPage((prev) => prev + 1);
     }
+
     loadingRef.current = false;
-  };
+  }, [products, page, itemsPerPage]);
+  //console.log(page)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,11 +40,13 @@ export const useInfiniteScroll = (
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [page, products]);
+  }, [loadMoreProducts]);
 
   useEffect(() => {
-    loadMoreProducts();
-  }, [loadMoreProducts]);
+    if (visibleProducts.length === 0) {
+      loadMoreProducts();
+    }
+  }, [loadMoreProducts, visibleProducts.length]);
 
   return { visibleProducts, loadMoreProducts };
 };
