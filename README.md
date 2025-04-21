@@ -3,7 +3,7 @@
 # Old School Tech Shop
 
 Bienvenido a **Old School Tech Shop**, una tienda en línea que ofrece productos vintage y retro de tecnología clásica. Desde televisores de los años 90 hasta cámaras fotográficas de colección, nuestro objetivo es transportar a los clientes al pasado con piezas exclusivas.
-
+## DEPLOY : https://the-secret-shop.vercel.app/
 ## Tecnologías utilizadas
 
 - **Next.js (con TypeScript):** Para la creación de la aplicación web.
@@ -27,6 +27,7 @@ Bienvenido a **Old School Tech Shop**, una tienda en línea que ofrece productos
 
 
 3. **Abrir el navegador:** Visita http://localhost:3000 para ver la aplicación en acción.
+o INGRESAR AL DEPLOY ## https://the-secret-shop.vercel.app/
 
   ** Autenticación y sesiones**
 Inicio de sesión
