@@ -9,7 +9,7 @@ const Cart = () => {
 
   return (
     <div className="flex flex-col justify-center p-0">
-      <h1 className="lg:block mt-4 text-xl font-bold text-gray-800 mb-2">
+      <h1 className="lg:block mt-4 text-3xl font-bold text-gray-800 mb-2">
         CARRITO
       </h1>
 
@@ -61,17 +61,16 @@ const Cart = () => {
             </Link>
           </div>
 
-          <div className="mt-6 text-center text-sm w-full max-w-md">
+          <div className="mt-4 text-center text-sm w-full max-w-md">
             <p>
               o
-              <Link
-                href={"/"}
+              <button
                 onClick={toggleCart}
                 className="font-medium text-black hover:text-amber-900 m-1"
               >
                 Continua comprando
                 <span aria-hidden="true"> &rarr;</span>
-              </Link>
+              </button>
             </p>
           </div>
         </section>
