@@ -44,7 +44,7 @@ const ProductDetailModal: FC<ProductDetailModalProps> = ({
       <div className="bg-white rounded-lg shadow-xl w-full max-w-[90%] sm:max-w-lg md:max-w-3xl lg:max-w-4xl p-6 relative border border-black overflow-y-auto max-h-[90vh]">
         <button
           onClick={onClose}
-          className="absolute top-2 right-4 text-black hover:text-gray-700"
+          className="absolute top-0.5 right-4  text-black hover:text-[#3E2723] hover:scale-125 transition-transform duration-300"
         >
           ✕
         </button>
@@ -61,10 +61,10 @@ const ProductDetailModal: FC<ProductDetailModalProps> = ({
               {name}
             </h2>
             <p className="mt-2 text-gray-600">{description}</p>
-            <p className="mt-4 text-lg font-semibold text-gray-800">${price}</p>
-            <p className="mt-4 text-sm text-gray-600">{detail}</p>
+            <p className="mt-2 text-lg font-semibold text-gray-800">${price}</p>
+            <p className="mt-2 text-sm text-gray-600">{detail}</p>
             {category && (
-              <p className="mt-4 text-sm font-medium text-gray-500">
+              <p className="mt-2 text-sm font-medium text-gray-500">
                 <span className="text-gray-900">{category}</span>
               </p>
             )}

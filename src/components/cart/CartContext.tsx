@@ -11,6 +11,7 @@ interface CartContextType {
   cart: CartProduct[];
   addProduct: (id: string) => void;
   removeProduct: (id: string) => void;
+  decreaseProduct: (id: string) => void;
   getTotalCount: () => number;
   isCartOpen: boolean;
   toggleCart: () => void;
@@ -56,7 +57,17 @@ export const CartProvider: React.FC<React.PropsWithChildren<object>> = ({
       return newCart;
     });
   };
-
+  const decreaseProduct = (id: string) => {
+    setCart((prevCart) => {
+      const productToDecrease = prevCart.find((item) => item.id === id);
+      if (productToDecrease && productToDecrease.quantity > 1) {
+        return prevCart.map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        );
+      }
+      return prevCart.filter((item) => item.id !== id);
+    });
+  };
   const getTotalCount = () => {
     return cart.reduce((total, product) => total + product.quantity, 0);
   };
@@ -72,6 +83,7 @@ export const CartProvider: React.FC<React.PropsWithChildren<object>> = ({
         addProduct,
         removeProduct,
         getTotalCount,
+        decreaseProduct,
         isCartOpen,
         toggleCart,
       }}

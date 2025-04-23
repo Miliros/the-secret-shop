@@ -19,7 +19,10 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
       <div className="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-lg p-6 flex flex-col">
         <div className="flex justify-between items-center mb-4">
           <button onClick={onClose}>
-            <HiOutlineX size={24} />
+            <HiOutlineX
+              size={24}
+              className=" text-black hover:text-[#3E2723] hover:scale-125 transition-transform duration-300"
+            />
           </button>
         </div>
         <div className="flex-1 overflow-y-auto">

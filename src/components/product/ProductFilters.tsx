@@ -10,77 +10,50 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({
   onPriceRangeChange,
 }) => {
   return (
-    <div className="flex gap-10 mb-8 w-9/12 md:w-3/12 mx-auto p-2">
-      <div className="w-full">
+    <div className="flex justify-around items-center mb-8  px-8">
+      <div className="w-1/4">
         <label
           htmlFor="category-select"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium text-black"
         >
           Categoría
         </label>
         <select
           id="category-select"
-          className="block w-full p-2 mb-6 text-sm text-gray-900 border border-black rounded-lg bg-gray-50 focus:ring-black focus:border-black dark:bg-black dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black sm:text-base"
+          className="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-[#3E2723] focus:border-[#3E2723] dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
           onChange={(e) => onCategoryChange(e.target.value || null)}
         >
-          <option value="" className="bg-white hover:text-white">
-            Todas
-          </option>
-          <option value="Computación" className="bg-white hover:text-white">
-            Computación
-          </option>
-          <option value="Audio" className="bg-white hover:text-white">
-            Audio
-          </option>
-          <option value="Fotografía" className="bg-white hover:text-white">
-            Fotografía
-          </option>
-          <option
-            value="Electrodomésticos"
-            className="bg-white hover:text-white"
-          >
-            Electrodomésticos
-          </option>
-          <option value="Telefonía" className="bg-white hover:text-white">
-            Telefonía
-          </option>
-          <option value="Oficina" className="bg-white hover:text-white">
-            Oficina
-          </option>
+          <option value="">Todas</option>
+          <option value="Computación">Computación</option>
+          <option value="Audio">Audio</option>
+          <option value="Fotografía">Fotografía</option>
+          <option value="Electrodomésticos">Electrodomésticos</option>
+          <option value="Telefonía">Telefonía</option>
+          <option value="Oficina">Oficina</option>
         </select>
       </div>
 
-      <div className="w-full">
+      <div className="w-1/4">
         <label
           htmlFor="price-select"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium text-black"
         >
           Precios
         </label>
         <select
           id="price-select"
-          className="block w-full p-2 mb-6 text-sm text-gray-900 border border-black rounded-lg bg-gray-50 focus:ring-black focus:border-black dark:bg-black dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black sm:text-base"
+          className="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-[#3E2723] focus:border-[#3E2723] dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
           onChange={(e) =>
             onPriceRangeChange(
               e.target.value ? JSON.parse(e.target.value) : null
             )
           }
         >
-          <option value="" className="bg-white hover:text-white">
-            Todos
-          </option>
-          <option value="[0,50]" className="bg-white hover:text-white">
-            $0 - $50
-          </option>
-          <option value="[50,100]" className="bg-white hover:text-white">
-            $50 - $100
-          </option>
-          <option value="[100,200]" className="bg-white hover:text-white">
-            $100 - $200
-          </option>
-          <option value="[200,500]" className="bg-white hover:text-white">
-            $200 - $500
-          </option>
+          <option value="">Todos</option>
+          <option value="[0,50]">$0 - $50</option>
+          <option value="[50,100]">$50 - $100</option>
+          <option value="[100,200]">$100 - $200</option>
+          <option value="[200,500]">$200 - $500</option>
         </select>
       </div>
     </div>

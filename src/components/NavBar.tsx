@@ -38,15 +38,15 @@ export default function NavBar() {
               />
             </Link>
 
-            <button className="w-12 h-12 lg:hidden" onClick={toggleMenu}>
-              <RiMenuSearchLine size={34} />
+            <button className=" lg:hidden" onClick={toggleMenu}>
+              <RiMenuSearchLine size={36} />
             </button>
           </div>
 
           <div
             className={`${
               isMenuOpen ? "flex flex-row space-x-4" : "hidden"
-            } sm:flex sm:flex-row items-center w-full sm:w-auto space-y-0 m-4 sm:mt-0 lg:space-x-4`}
+            } sm:flex sm:flex-row items-center w-full sm:w-auto space-y-0 m-2 sm:mt-0 lg:space-x-4`}
           >
             <div className="flex items-center">
               <Link
@@ -59,7 +59,7 @@ export default function NavBar() {
             <div className="flex space-x-2 items-center">
               <button
                 onClick={toggleCart}
-                className="group relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
+                className="group relative flex p-2 items-center justify-center h-10 rounded-3xl border border-b-gray-800 bg-white focus:bg-gray-100 active:bg-gray-200"
               >
                 {getTotalCount() > 0 && (
                   <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
@@ -74,7 +74,7 @@ export default function NavBar() {
 
               <button
                 onClick={handleLogout}
-                className="group relative flex p-2 items-center justify-center h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200"
+                className="group relative flex p-2 items-center justify-center h-10 rounded-3xl border border-b-gray-800 bg-white focus:bg-gray-100 active:bg-gray-200"
               >
                 <HiOutlineLogout
                   size={22}

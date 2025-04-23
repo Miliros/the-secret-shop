@@ -1,7 +1,7 @@
 import { useCart } from "../cart/CartContext";
 
 export const useCartActions = () => {
-  const { addProduct, removeProduct } = useCart();
+  const { addProduct, removeProduct, decreaseProduct } = useCart();
 
   const handleAddToCart = (id: string) => {
     addProduct(id);
@@ -11,5 +11,9 @@ export const useCartActions = () => {
     removeProduct(id);
   };
 
-  return { handleAddToCart, handleRemoveItem };
+  const handleDecreaseItem = (id: string) => {
+    decreaseProduct(id);
+  };
+
+  return { handleAddToCart, handleRemoveItem, handleDecreaseItem };
 };

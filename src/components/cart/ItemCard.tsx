@@ -1,4 +1,8 @@
-import { MdDeleteOutline, MdAddCircleOutline } from "react-icons/md";
+import {
+  MdDeleteOutline,
+  MdAddCircleOutline,
+  MdRemoveCircleOutline,
+} from "react-icons/md";
 import Image from "next/image";
 import { Product } from "../../types/types";
 import { useCartActions } from "../hooks/useCartActions";
@@ -9,7 +13,8 @@ interface Props {
 }
 
 export const ItemCard = ({ product, quantity }: Props) => {
-  const { handleAddToCart, handleRemoveItem } = useCartActions();
+  const { handleAddToCart, handleRemoveItem, handleDecreaseItem } =
+    useCartActions();
 
   return (
     <div className="flex items-center shadow rounded-lg w-full bg-white border-gray-100">
@@ -43,13 +48,21 @@ export const ItemCard = ({ product, quantity }: Props) => {
         <MdAddCircleOutline
           size={19}
           aria-label="Añadir producto"
-          className="transition-all hover:scale-105 focus:scale-107 m-4"
+          className="transition-all hover:scale-105 focus:scale-107 m-1"
           onClick={() => handleAddToCart(product.id)}
         />
+
+        <MdRemoveCircleOutline
+          size={19}
+          aria-label="Restar producto"
+          className="transition-all hover:scale-105 focus:scale-107 m-1"
+          onClick={() => handleDecreaseItem(product.id)}
+        />
+
         <MdDeleteOutline
           size={19}
           aria-label="Eliminar producto"
-          className="transition-all hover:scale-105 focus:scale-107"
+          className="transition-all hover:scale-105 focus:scale-107 ml-1"
           onClick={() => handleRemoveItem(product.id)}
         />
       </div>

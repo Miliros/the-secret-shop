@@ -19,7 +19,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
   return (
     <div id="default-carousel" className="relative w-full me-8">
-      <div className="relative h-80 overflow-hidden rounded-lg md:h-[400px]">
+      <div className="relative h-80 overflow-hidden rounded-lg md:h-[492px]">
         {images.map((image, index) => (
           <div
             key={index}
@@ -30,7 +30,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             <img
               src={image}
               alt={`Carousel Image ${index + 1}`}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
         ))}
