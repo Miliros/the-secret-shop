@@ -70,7 +70,7 @@ export default function AuthPage() {
               caracteres, una mayúscula, un número y un carácter especial .
             </p>
             <button
-              className="mt-4 w-full py-2 px-4 bg-black text-white font-bold  hover:bg-amber-900"
+              className="mt-4 w-full py-2 px-4 bg-black text-white font-bold hover:bg-[#3E2723]"
               onClick={() => setShowAlert(false)}
             >
               Cerrar
@@ -128,7 +128,7 @@ export default function AuthPage() {
           {error && <p className="text-red-500 text-sm">{error}</p>}
           <button
             type="submit"
-            className="w-full py-2 px-4 mt-1.5 bg-black text-white font-bold border border-black focus:outline-none hover:bg-amber-900"
+            className="w-full py-2 px-4 mt-1.5 bg-black text-white font-bold border border-black focus:outline-none hover:bg-[#3E2723]"
           >
             Iniciar Sesión
           </button>

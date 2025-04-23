@@ -118,7 +118,7 @@ export const products: Product[] = [
     description: "Cámara fotográfica antigua y funcional.",
     detail:
       "La cámara Exacta Varex Ilb es una joya de la fotografía clásica, perfecta para exhibiciones o proyectos retro.",
-    image: "/images/slide11.jpg",
+    image: "/images/slide1.jpg",
     category: "Fotografía",
     stars: 5,
   },
