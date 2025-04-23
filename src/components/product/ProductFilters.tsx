@@ -10,7 +10,7 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({
   onPriceRangeChange,
 }) => {
   return (
-    <div className="flex justify-around items-center mb-8  px-8">
+    <div className="flex justify-around items-center mb-4 md:mb-8 px-8">
       <div className="w-1/4">
         <label
           htmlFor="category-select"

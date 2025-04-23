@@ -11,7 +11,7 @@ export default function Home() {
       <NavBar />
       <MarqueeBar />
       <Carousel images={imageUrls} />
-      <h2 className="text-center text-6xl md:text-8xl lg:text-9xl font-custom font-bold tracking-wider text-[#3E2723] m-10">
+      <h2 className="text-center text-6xl md:text-8xl lg:text-9xl font-custom font-normal md:font-bold tracking-wider text-[#3E2723] mt-15">
         OLD SCHOOL TECH SHOP
       </h2>
 

@@ -50,7 +50,7 @@ export default function AuthPage() {
     >
       {showAlert && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-white p-4 rounded-lg shadow-lg w-11/12 md:w-1/3 border-1 border-black">
+          <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-11/12 md:w-1/3 max-w-xs border border-black">
             <div className="flex items-center">
               <svg
                 className="w-6 h-6 fill-current text-black"
