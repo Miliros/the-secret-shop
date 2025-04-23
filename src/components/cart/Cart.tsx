@@ -52,7 +52,7 @@ const Cart = () => {
                 className={`w-full border border-transparent px-4 py-3 text-base font-medium shadow-sm focus:outline-none focus:ring-offset-2 focus:ring-offset-gray-50 ${
                   totalToPay === 0
                     ? "bg-gray-200 cursor-not-allowed"
-                    : "bg-black text-white hover:bg-amber-900"
+                    : "bg-black text-white  hover:bg-[#3E2723]"
                 }`}
                 disabled={totalToPay === 0}
               >
