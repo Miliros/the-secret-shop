@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import { FiChevronDown } from "react-icons/fi";
 
 interface CarouselProps {
   images: string[];
@@ -27,10 +29,12 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
               index === currentIndex ? "block" : "hidden"
             }`}
           >
-            <img
+            <Image
               src={image}
               alt={`Carousel Image ${index + 1}`}
-              className="w-full h-full object-cover"
+              layout="fill"
+              objectFit="cover"
+              className="w-full h-full"
             />
           </div>
         ))}
@@ -47,6 +51,10 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             aria-hidden="true"
           />
         ))}
+      </div>
+
+      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-50px]">
+        <FiChevronDown size={36} className="text-black animate-bounce" />
       </div>
     </div>
   );

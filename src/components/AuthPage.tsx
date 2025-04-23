@@ -67,8 +67,7 @@ export default function AuthPage() {
             <p className="mt-2 text-sm text-gray-700">
               Este formulario es solo para demostrar validación, debes ingresar
               cualquier email y cualquier contraseña que tenga al menos 6
-              caracteres, una mayúscula, un número y un carácter especial como
-              "!".
+              caracteres, una mayúscula, un número y un carácter especial .
             </p>
             <button
               className="mt-4 w-full py-2 px-4 bg-black text-white font-bold  hover:bg-amber-900"
