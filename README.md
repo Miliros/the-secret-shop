@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/ac66e92b-d29b-4d82-9892-92307cd174a6)
+![image](https://github.com/user-attachments/assets/fdfbe7ae-cce6-40d9-956e-ca2003bcfd99)
 
 # Old School Tech Shop
 
@@ -27,7 +27,8 @@ Bienvenido a **Old School Tech Shop**, una tienda en línea que ofrece productos
 
 
 3. **Abrir el navegador:** Visita http://localhost:3000 para ver la aplicación en acción.
-o INGRESAR AL DEPLOY ## https://the-secret-shop.vercel.app/
+o INGRESAR AL DEPLOY
+## https://the-secret-shop.vercel.app/
 
   ** Autenticación y sesiones**
 Inicio de sesión
