@@ -30,7 +30,7 @@ export default function ProductCard({
     <>
       <div
         onClick={toggleModal}
-        className="bg-white border border-gray-200 rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer flex flex-col h-full min-h-[450px]"
+        className="bg-white border border-gray-200 rounded-lg shadow transition-transform duration-300 hover:scale-103 hover:shadow-lg cursor-pointer flex flex-col h-full min-h-[450px]"
       >
         <div className="w-full aspect-[4/4] overflow-hidden rounded-t-lg ">
           <Image
@@ -70,7 +70,7 @@ export default function ProductCard({
           </div>
           <div className="p-2 pt-0">
             <button
-              className="block w-full rounded-lg bg-blue-gray-900/10 py-3 px-4 text-blue-gray-900 font-bold uppercase transition-all hover:scale-105 focus:scale-105"
+              className="block w-full rounded-lg bg-blue-gray-900/10 py-3 px-4 text-[#3E2723] font-bold  uppercase transition-all  hover:scale-105 focus:scale-105"
               type="button"
               onClick={(e) => {
                 e.stopPropagation();

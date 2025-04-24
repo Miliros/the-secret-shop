@@ -1,16 +1,18 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { validateEmail, validatePassword } from "@/utils/validation";
 import Cookies from "js-cookie";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function AuthPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [showAlert, setShowAlert] = useState(true);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,8 +41,27 @@ export default function AuthPage() {
   };
 
   useEffect(() => {
-    setShowAlert(true);
-    setTimeout(() => setShowAlert(false), 6000);
+    toast.warn(
+      "Este formulario es solo para demostrar validación. Usa cualquier email y contraseña válida para probar.",
+      {
+        position: "top-right",
+        autoClose: false,
+        closeOnClick: false,
+        draggable: false,
+        pauseOnHover: true,
+        hideProgressBar: true,
+        className: "text-xs font-bold",
+        style: {
+          backgroundColor: "#fff3cd",
+          color: "#000000",
+          width: "100%",
+          maxWidth: "800px",
+          borderRadius: "0px",
+          border: "1px solid #ffeeba",
+          padding: "4px 8px",
+        },
+      }
+    );
   }, []);
 
   return (
@@ -48,38 +69,9 @@ export default function AuthPage() {
       className="relative h-screen flex flex-col items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: "url('images/bg.jpg')", height: "91vh" }}
     >
-      {showAlert && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-11/12 md:w-1/3 max-w-xs border border-black">
-            <div className="flex items-center">
-              <svg
-                className="w-6 h-6 fill-current text-black"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z" />
-              </svg>
-              <h2 className="ml-2 font-semibold text-2xl text-black">
-                ¡Alerta de validación!
-              </h2>
-            </div>
-            <p className="mt-2 text-sm text-gray-700">
-              Este formulario es solo para demostrar validación, debes ingresar
-              cualquier email y cualquier contraseña que tenga al menos 6
-              caracteres, una mayúscula, un número y un carácter especial .
-            </p>
-            <button
-              className="mt-4 w-full py-2 px-4 bg-black text-white font-bold hover:bg-[#3E2723]"
-              onClick={() => setShowAlert(false)}
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      )}
+      <ToastContainer />
 
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full  max-w-sm border border-black">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm border border-black">
         <div className="text-center mb-6">
           <Image
             src="/images/logo.png"

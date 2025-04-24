@@ -1,1 +1,1 @@
-export const imageUrls: string[] = ["/images/s.jpg", "/images/slice3.png"];
+export const imageUrls: string[] = ["/images/s.jpg", "/images/SAA.jpg"];

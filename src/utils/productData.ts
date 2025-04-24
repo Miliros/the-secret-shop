@@ -235,4 +235,37 @@ export const products: Product[] = [
     category: "Audio",
     stars: 5,
   },
+  {
+    id: "UUID-023",
+    name: "Teléfono Fijo con Rosca",
+    price: 60,
+    description: "Teléfono clásico con dial rotativo.",
+    detail:
+      "Este teléfono fijo con dial rotativo es un ícono de los años pasados. Perfecto para decoraciones vintage o colecciones retro.",
+    image: "/images/telefonoFIjo.jpg",
+    category: "Telefonía",
+    stars: 4,
+  },
+  {
+    id: "UUID-024",
+    name: "Walkman Rojo Retro",
+    price: 85,
+    description: "Walkman portátil con diseño vibrante.",
+    detail:
+      "El Walkman rojo retro combina funcionalidad clásica con un diseño llamativo, ideal para quienes valoran lo vintage.",
+    image: "/images/walkmanRojo.jpg",
+    category: "Audio",
+    stars: 5,
+  },
+  {
+    id: "UUID-025",
+    name: "Cinta VHS Stranger",
+    price: 40,
+    description: "Cinta VHS clásica de películas.",
+    detail:
+      "La cinta VHS Stranger es perfecta para coleccionistas de tecnología retro y entusiastas del cine clásico.",
+    image: "/images/stranger.jpg",
+    category: "Video",
+    stars: 4,
+  },
 ];

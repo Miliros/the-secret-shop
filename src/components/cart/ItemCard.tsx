@@ -37,7 +37,6 @@ export const ItemCard = ({ product, quantity }: Props) => {
         </p>
 
         <div className="flex flex-col items-start justify-between">
-          <span className="text-gray-900 text-sm">Cantidad: {quantity}</span>
           <span className="font-bold text-black text-sm">
             Total: ${(product.price * quantity).toFixed(2)}
           </span>
@@ -51,12 +50,21 @@ export const ItemCard = ({ product, quantity }: Props) => {
           className="transition-all hover:scale-105 focus:scale-107 m-1"
           onClick={() => handleAddToCart(product.id)}
         />
-
+        <span className="text-gray-900 text-sm font-bold">{quantity}</span>
         <MdRemoveCircleOutline
           size={19}
           aria-label="Restar producto"
-          className="transition-all hover:scale-105 focus:scale-107 m-1"
-          onClick={() => handleDecreaseItem(product.id)}
+          className={`transition-all m-1 ${
+            quantity === 1
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:scale-105 focus:scale-107"
+          }`}
+          onClick={() => {
+            if (quantity > 0) {
+              handleDecreaseItem(product.id);
+            }
+          }}
+          role={quantity === 1 ? "button-disabled" : "button-active"}
         />
 
         <MdDeleteOutline

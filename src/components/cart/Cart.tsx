@@ -66,7 +66,7 @@ const Cart = () => {
               o
               <button
                 onClick={toggleCart}
-                className="font-medium text-black hover:text-amber-900 m-1"
+                className="font-medium text-black hover:text-[#3E2723] m-1"
               >
                 Continua comprando
                 <span aria-hidden="true"> &rarr;</span>
