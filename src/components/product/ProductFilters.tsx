@@ -20,7 +20,7 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({
         </label>
         <select
           id="category-select"
-          className="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-[#3E2723] focus:border-[#3E2723] dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+          className="block w-full p-2 text-sm text-gray-900 border border-[#3E2723] rounded-lg bg-gray-50 focus:ring-[#3E2723] focus:border-[#3E2723] dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
           onChange={(e) => onCategoryChange(e.target.value || null)}
         >
           <option value="">Todas</option>
@@ -42,7 +42,7 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({
         </label>
         <select
           id="price-select"
-          className="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-[#3E2723] focus:border-[#3E2723] dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+          className="block w-full p-2 text-sm text-gray-900 border border-[#3E2723] rounded-lg bg-gray-50 focus:ring-[#3E2723] focus:border-[#3E2723] dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
           onChange={(e) =>
             onPriceRangeChange(
               e.target.value ? JSON.parse(e.target.value) : null

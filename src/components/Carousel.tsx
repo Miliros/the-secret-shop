@@ -21,7 +21,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
   return (
     <div id="default-carousel" className="relative w-full me-8">
-      <div className="relative h-80 overflow-hidden rounded-lg md:h-[492px]">
+      <div className="relative h-80 overflow-hidden md:h-[492px]">
         {images.map((image, index) => (
           <div
             key={index}
@@ -54,7 +54,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
       </div>
 
       <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-50px]">
-        <FiChevronDown size={36} className="text-black animate-bounce" />
+        <FiChevronDown size={36} className="text-[#3E2723] animate-titileo" />
       </div>
     </div>
   );

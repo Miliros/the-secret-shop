@@ -27,7 +27,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   });
 
   return (
-    <div className="flex flex-col items-center min-h-screen pt-10 pb-20">
+    <div className="flex flex-col items-center min-h-screen  pb-20">
       <div className="w-11/12 lg:w-9/12 mx-auto">
         <ProductFilters
           onCategoryChange={setCategoryFilter}

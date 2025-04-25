@@ -2,6 +2,39 @@ import { Product } from "../types/types";
 
 export const products: Product[] = [
   {
+    id: "UUID-025",
+    name: "Tocadiscos con CD Rosa Vintage",
+    price: 180,
+    description: "Un clásico tocadiscos con reproductor de CD integrado.",
+    detail:
+      "Este tocadiscos vintage combina un diseño rosa vibrante con un reproductor de CD integrado. Perfecto para los amantes de lo retro y la música clásica.",
+    image: "/images/cdRosa.jpg",
+    category: "Audio",
+    stars: 5,
+  },
+  {
+    id: "UUID-026",
+    name: "Teléfono de los 90 con Foco",
+    price: 95,
+    description: "Teléfono marrón retro con foco decorativo.",
+    detail:
+      "Este teléfono clásico de los años 90 incluye un foco decorativo, ideal para añadir un toque nostálgico y funcional a cualquier espacio.",
+    image: "/images/telefonoFOco.jpg",
+    category: "Telefonía",
+    stars: 4,
+  },
+  {
+    id: "UUID-027",
+    name: "Máquina de Escribir Imperial 90s",
+    price: 220,
+    description: "Máquina de escribir vintage marca Imperial.",
+    detail:
+      "La máquina de escribir Imperial de los años 90 es un icono de elegancia y funcionalidad. Perfecta para coleccionistas y amantes de lo retro.",
+    image: "/images/maquinaImperial.jpg",
+    category: "Oficina",
+    stars: 5,
+  },
+  {
     id: "UUID-011",
     name: "Televisor de los años 90",
     price: 150,
@@ -66,6 +99,39 @@ export const products: Product[] = [
     image: "/images/98.jpg",
     category: "Computación",
     stars: 3,
+  },
+  {
+    id: "UUID-023",
+    name: "Teléfono Fijo con Rosca",
+    price: 60,
+    description: "Teléfono clásico con dial rotativo.",
+    detail:
+      "Este teléfono fijo con dial rotativo es un ícono de los años pasados. Perfecto para decoraciones vintage o colecciones retro.",
+    image: "/images/telefonoFIjo.jpg",
+    category: "Telefonía",
+    stars: 4,
+  },
+  {
+    id: "UUID-024",
+    name: "Walkman Rojo Retro",
+    price: 85,
+    description: "Walkman portátil con diseño vibrante.",
+    detail:
+      "El Walkman rojo retro combina funcionalidad clásica con un diseño llamativo, ideal para quienes valoran lo vintage.",
+    image: "/images/walkmanRojo.jpg",
+    category: "Audio",
+    stars: 5,
+  },
+  {
+    id: "UUID-025",
+    name: "Cinta VHS Stranger",
+    price: 40,
+    description: "Cinta VHS clásica de películas.",
+    detail:
+      "La cinta VHS Stranger es perfecta para coleccionistas de tecnología retro y entusiastas del cine clásico.",
+    image: "/images/stranger.jpg",
+    category: "Video",
+    stars: 4,
   },
   {
     id: "UUID-002",
@@ -234,38 +300,5 @@ export const products: Product[] = [
     image: "/images/sonyCD.jpg",
     category: "Audio",
     stars: 5,
-  },
-  {
-    id: "UUID-023",
-    name: "Teléfono Fijo con Rosca",
-    price: 60,
-    description: "Teléfono clásico con dial rotativo.",
-    detail:
-      "Este teléfono fijo con dial rotativo es un ícono de los años pasados. Perfecto para decoraciones vintage o colecciones retro.",
-    image: "/images/telefonoFIjo.jpg",
-    category: "Telefonía",
-    stars: 4,
-  },
-  {
-    id: "UUID-024",
-    name: "Walkman Rojo Retro",
-    price: 85,
-    description: "Walkman portátil con diseño vibrante.",
-    detail:
-      "El Walkman rojo retro combina funcionalidad clásica con un diseño llamativo, ideal para quienes valoran lo vintage.",
-    image: "/images/walkmanRojo.jpg",
-    category: "Audio",
-    stars: 5,
-  },
-  {
-    id: "UUID-025",
-    name: "Cinta VHS Stranger",
-    price: 40,
-    description: "Cinta VHS clásica de películas.",
-    detail:
-      "La cinta VHS Stranger es perfecta para coleccionistas de tecnología retro y entusiastas del cine clásico.",
-    image: "/images/stranger.jpg",
-    category: "Video",
-    stars: 4,
   },
 ];
