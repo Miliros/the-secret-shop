@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/fdfbe7ae-cce6-40d9-956e-ca2003bcfd99)
+![image](https://github.com/user-attachments/assets/597bae41-0f4e-41fc-bba1-e13a1b67ed55)
 
 # Old School Tech Shop
 
@@ -21,13 +21,14 @@ Bienvenido a **Old School Tech Shop**, una tienda en línea que ofrece productos
    cd the-secret-shop  
 
 2. **Instalar las dependencias::**
+   ```bash
 
    npm install
    npm run dev
 
 
 3. **Abrir el navegador:** Visita http://localhost:3000 para ver la aplicación en acción.
-o INGRESAR AL DEPLOY
+## o INGRESAR AL DEPLOY
 ## https://the-secret-shop.vercel.app/
 
   ** Autenticación y sesiones**
