@@ -11,14 +11,15 @@ export default function Home() {
       <NavBar />
       <MarqueeBar />
       <Carousel images={imageUrls} />
-      <div className="text-center my-20 p-8">
-        <h2 className="text-6xl md:text-8xl lg:text-9xl font-custom font-normal md:font-bold tracking-wider text-[#3E2723] ">
+      <div className="text-center my-20 p-8 sm:p-4">
+        <h2 className="text-7xl sm:text-6xl md:text-8xl lg:text-9xl font-custom font-normal md:font-bold tracking-wider text-[#3E2723]">
           OLD SCHOOL TECH SHOP
         </h2>
-        <p className="text-xl sm:text-2xl font-light tracking-wide text-[#3E2723] mt-1">
+        <p className="text-base sm:text-lg md:text-xl sm:font-light tracking-wide text-[#3E2723] mt-1">
           TECNOLOGÍA RETRO & VINTAGE
         </p>
       </div>
+
       <ProductList products={products} />
     </div>
   );
