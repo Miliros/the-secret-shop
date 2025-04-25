@@ -53,7 +53,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         ))}
       </div>
 
-      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-50px]">
+      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-40px]">
         <FiChevronDown size={36} className="text-[#3E2723] animate-titileo" />
       </div>
     </div>
