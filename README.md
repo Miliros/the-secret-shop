@@ -19,19 +19,22 @@ NPM: Gestión de dependencias y scripts.
 
 ## 🛠 Instalación y configuración
 1. Clonar el repositorio
-
 git clone https://github.com/Miliros/the-secret-shop.git
 cd the-secret-shop
+
 2. Instalar dependencias
-
 npm install
-3. Ejecutar el proyecto
 
+3. Ejecutar el proyecto
 npm run dev
+
 Abre tu navegador en http://localhost:3000 para visualizar la aplicación.
-   o ingresa al deploy https://the-secret-shop.vercel.app/
-##🔒 Autenticación y gestión de sesiones
+
+O ingresa al deploy https://the-secret-shop.vercel.app/
+   
+## 🔒 Autenticación y gestión de sesiones
 Inicio de sesión
+
 Validación: Formulario que valida un correo electrónico y contraseña.
 
 Cookie de sesión: Una vez autenticado, se guarda una cookie llamada userSession que almacena el correo del usuario.
@@ -46,7 +49,8 @@ Correo: prueba@dominio.com
 
 Contraseña: Prueba123!
 
-##✨ Funcionalidades implementadas
+## ✨ Funcionalidades implementadas
+
 Productos
 Carrusel de destacados: Muestra productos destacados con transición automática.
 
@@ -78,7 +82,8 @@ Transiciones fluidas: Experiencia visual agradable.
 
 Componentes reutilizables: Construcción modular siguiendo buenas prácticas.
 
-##🛠 Mejoras futuras
+## 🛠 Mejoras futuras
+
 Experiencia del usuario
 Modo oscuro: Toggle para cambiar entre temas claro y oscuro.
 
