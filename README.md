@@ -1,156 +1,107 @@
-![image](https://github.com/user-attachments/assets/fdfbe7ae-cce6-40d9-956e-ca2003bcfd99)
+![image](https://github.com/user-attachments/assets/597bae41-0f4e-41fc-bba1-e13a1b67ed55)
 
-# Old School Tech Shop
+## Old School Tech Shop
+Bienvenido a Old School Tech Shop, una tienda en línea especializada en productos tecnológicos vintage y retro. Desde televisores de los años 90 hasta cámaras de colección, nuestra misión es ofrecer una experiencia única que combina nostalgia y exclusividad.
 
-Bienvenido a **Old School Tech Shop**, una tienda en línea que ofrece productos vintage y retro de tecnología clásica. Desde televisores de los años 90 hasta cámaras fotográficas de colección, nuestro objetivo es transportar a los clientes al pasado con piezas exclusivas.
-## DEPLOY : https://the-secret-shop.vercel.app/
-## Tecnologías utilizadas
+## 🌐 Visitar el Deploy   https://the-secret-shop.vercel.app/
+## 🚀 Tecnologías utilizadas
+Next.js (con TypeScript): Framework para la creación de aplicaciones web modernas.
 
-- **Next.js (con TypeScript):** Para la creación de la aplicación web.
-- **Tailwind CSS:** Para un diseño responsivo y estilizado.
-- **React:** Para la construcción de componentes reutilizables.
-- **React Icons:** Para incorporar íconos en la interfaz de usuario.
-- **Cookies.js:** Para la persistencia del estado del carrito entre refrescos.
-- **NPM:** Para la gestión de dependencias y ejecución de scripts.
+Tailwind CSS: Herramienta para diseñar interfaces responsivas y estilizadas.
 
-## Instalación
+React: Biblioteca para crear componentes reutilizables.
 
-1. **Clonar el repositorio:**
-   ```bash
-   git clone https://github.com/Miliros/the-secret-shop.git  
-   cd the-secret-shop  
+React Icons: Conjunto de íconos para mejorar la interfaz.
 
-2. **Instalar las dependencias::**
+Cookies.js: Gestión del estado del carrito de compras.
 
-   npm install
-   npm run dev
+NPM: Gestión de dependencias y scripts.
 
+## 🛠 Instalación y configuración
+1. Clonar el repositorio
+git clone https://github.com/Miliros/the-secret-shop.git
+cd the-secret-shop
 
-3. **Abrir el navegador:** Visita http://localhost:3000 para ver la aplicación en acción.
-o INGRESAR AL DEPLOY
-## https://the-secret-shop.vercel.app/
+2. Instalar dependencias
+npm install
 
-  ** Autenticación y sesiones**
+3. Ejecutar el proyecto
+npm run dev
+
+Abre tu navegador en http://localhost:3000 para visualizar la aplicación.
+
+O ingresa al deploy https://the-secret-shop.vercel.app/
+   
+## 🔒 Autenticación y gestión de sesiones
 Inicio de sesión
-El formulario de inicio de sesión valida un correo y una contraseña.
 
-Al autenticarse correctamente, se guarda una cookie userSession que almacena el correo del usuario.
+Validación: Formulario que valida un correo electrónico y contraseña.
 
-Ejemplo:
+Cookie de sesión: Una vez autenticado, se guarda una cookie llamada userSession que almacena el correo del usuario.
+
+Duración: 1 día.
+
+Redirección: Si no existe la cookie, el usuario es redirigido al formulario de login.
+
+Ejemplo de credenciales:
 
 Correo: prueba@dominio.com
 
 Contraseña: Prueba123!
 
-Gestión de cookies
-Duración de la sesión: 1 día.
+## ✨ Funcionalidades implementadas
 
-Si la cookie userSession no está presente, el usuario es redirigido automáticamente al login.
+Productos
+Carrusel de destacados: Muestra productos destacados con transición automática.
 
+Scroll infinito: Carga progresiva de productos utilizando un hook personalizado (useInfiniteScroll).
 
-## Funcionalidades implementadas
--Productos
-Carrusel de productos destacados:
+Filtros dinámicos: Filtrado por categorías y precios con mensajes informativos si no hay coincidencias.
 
-Ubicado encima de la lista de productos.
+Detalles del producto
+Modal de detalles: Información ampliada con imagen optimizada, descripción, precio, categoría, calificación, y la opción de agregar al carrito.
 
-Muestra productos destacados que cambian automáticamente.
+Carrito de compras
+Gestión: Incremento/reducción de cantidades y eliminación de productos.
 
-Mejora la experiencia visual al destacar ciertos artículos.
+Persistencia: El estado del carrito se almacena en cookies utilizando js-cookie para mantener la información entre sesiones.
 
-Scroll infinito:
+Cálculo dinámico: Total a pagar actualizado automáticamente según los cambios en el carrito.
 
-Implementado con un hook personalizado useInfiniteScroll.
+Interfaz: Modal lateral intuitivo para mostrar los productos añadidos al carrito.
 
-Mejora el rendimiento cargando productos progresivamente.
+Manejo del estado: Implementado con Context API, lo que permite compartir el estado global del carrito entre diferentes componentes de la aplicación.
 
--Filtros dinámicos:
+Página "Sobre Nosotros"
+Funcionalidad: Permite al usuario volver fácilmente a la tienda.
 
-Filtrado por categoría y rango de precios.
+🌟 Diseño
+100% responsivo: Diseño adaptable a dispositivos móviles (Mobile-First).
 
-Muestra un mensaje informativo si no hay coincidencias.
+Transiciones fluidas: Experiencia visual agradable.
 
--Detalles del producto:
-## si se selecciona una tarjeta de producto te lleva al detalle
+Componentes reutilizables: Construcción modular siguiendo buenas prácticas.
 
-Modal con información ampliada:
+## 🛠 Mejoras futuras
 
-Imagen optimizada con Next.js.
+Experiencia del usuario
+Modo oscuro: Toggle para cambiar entre temas claro y oscuro.
 
-Descripción, precio, categoría y calificación.
+Wishlist: Guardar productos para compras futuras.
 
-Posibilidad de agregar al carrito desde el modal.
+Checkout simulado: Resumen de compra y validación del formulario.
 
--Carrito de compras
-Gestión de productos:
+Notificaciones dinámicas: Alertas para productos agotados o añadidos al carrito.
 
-Incrementar o reducir cantidades.
-
-Eliminar productos si la cantidad llega a cero.
-
-Persistencia del carrito:
-
-Estado del carrito almacenado en cookies con js-cookie.
-
-Cálculo dinámico:
-
-Total a pagar actualizado automáticamente.
-
--Interfaz amigable:
-
-Modal lateral para mostrar los productos.
-## Page Sobre nosotros que le permite al usuario tambien volver a la tienda
-
-## Diseño 100% responsivo con transiciones fluidas.
-   
-## Ideas extra implementadas de la consigna
-Funcionalidades incluidas
-Diseño 100% responsivo y Mobile-First:
-
-La aplicación está optimizada para diferentes tamaños de pantalla.
-
-Uso de componentes reutilizables:
-
-Construcción modular siguiendo buenas prácticas en React.
-
-Simulación de productos desde una API:
-
-Los productos son obtenidos de un archivo JSON local simulado.
-
-Scroll infinito:
-
-Mejora el rendimiento y la experiencia del usuario.
-## Mejoras futuras
-Experiencia de usuario
-Modo oscuro:
-
-Agregar un toggle para cambiar entre temas claro y oscuro.
-
-Checkout simulado:
-
-Implementar un formulario con validación y resumen de compra.
-
-Wishlist (Lista de deseos):
-
-Guardar productos para comprarlos más tarde.
-
-Notificaciones dinámicas:
-
-Alertas cuando un producto esté agotado o agregado al carrito.
-
-
+Contenido adicional
 Historia de la empresa y misión.
 
-Fotos del equipo y testimonios de clientes.
+Fotos del equipo y testimonios.
 
 Mapa interactivo con la ubicación de la tienda.
 
-Mejoras técnicas
-Internacionalización:
+Técnicas
+Internacionalización: Traducción del sitio a múltiples idiomas.
 
-Traducción del sitio a múltiples idiomas.
-
-SEO avanzado:
-
-Metadatos estructurados para productos y categorías
+SEO avanzado: Mejora de metadatos y posicionamiento.
 
