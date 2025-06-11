@@ -47,7 +47,7 @@ export const ItemCard = ({ product, quantity }: Props) => {
         <MdRemoveCircleOutline
           size={19}
           aria-label="Restar producto"
-          className={`transition-all m-1 ${
+          className={`transition-all m-1 cursor-pointer ${
             quantity === 1
               ? "opacity-50 cursor-not-allowed pointer-events-none"
               : "hover:scale-105 focus:scale-107"

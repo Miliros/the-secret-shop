@@ -33,12 +33,12 @@ export default function NavBar() {
                 alt="Logo"
                 width={190}
                 height={100}
-                className="w-auto h-12 object-cover"
+                className="w-auto h-12 cursor-pointer object-cover"
                 priority
               />
             </Link>
 
-            <button className=" lg:hidden" onClick={toggleMenu}>
+            <button className=" lg:hidden cursor-pointer" onClick={toggleMenu}>
               <RiMenuSearchLine size={36} />
             </button>
           </div>
@@ -51,7 +51,7 @@ export default function NavBar() {
             <div className="flex items-center">
               <Link
                 href="/about"
-                className="text-[#3E2723] text-sm hover:text-gray-600"
+                className="text-[#3E2723] cursor-pointer text-sm hover:text-gray-600"
               >
                 Nosotros
               </Link>
@@ -74,7 +74,7 @@ export default function NavBar() {
 
               <button
                 onClick={handleLogout}
-                className="group relative flex p-2 items-center justify-center h-10 rounded-3xl border border-b-gray-800 bg-white focus:bg-gray-100 active:bg-gray-200"
+                className="group relative flex p-2 items-center justify-center h-10 rounded-3xl border cursor-pointer border-b-gray-800 bg-white focus:bg-gray-100 active:bg-gray-200"
               >
                 <HiOutlineLogout
                   size={22}

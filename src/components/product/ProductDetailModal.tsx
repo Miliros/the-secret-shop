@@ -44,7 +44,7 @@ const ProductDetailModal: FC<ProductDetailModalProps> = ({
       <div className="bg-white rounded-lg shadow-xl w-full max-w-[90%] sm:max-w-lg md:max-w-3xl lg:max-w-4xl p-6 relative border border-black overflow-y-auto max-h-[90vh]">
         <button
           onClick={onClose}
-          className="absolute top-0.5 right-4  text-black hover:text-[#3E2723] hover:scale-125 transition-transform duration-300"
+          className="absolute top-0.5 right-4 cursor-pointer text-black hover:text-[#3E2723] hover:scale-125 transition-transform duration-300"
         >
           ✕
         </button>
@@ -75,7 +75,7 @@ const ProductDetailModal: FC<ProductDetailModalProps> = ({
                   onAddToCart();
                   onClose();
                 }}
-                className="w-full py-3 px-4 bg-black text-white font-bold hover:bg-[#3E2723]"
+                className="w-full py-3 px-4 bg-black text-white font-bold cursor-pointer hover:bg-[#3E2723]"
               >
                 Agregar al carrito
               </button>

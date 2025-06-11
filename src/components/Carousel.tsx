@@ -45,7 +45,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
           <button
             key={index}
             type="button"
-            className={`w-3 h-3 rounded-full ${
+            className={`w-3 h-3 rounded-full cursor-pointer ${
               currentIndex === index ? "bg-white" : "bg-gray-500"
             }`}
             aria-hidden="true"

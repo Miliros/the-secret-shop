@@ -120,7 +120,7 @@ export default function AuthPage() {
           {error && <p className="text-red-500 text-sm">{error}</p>}
           <button
             type="submit"
-            className="w-full py-2 px-4 mt-1.5 bg-black text-white font-bold border border-black focus:outline-none hover:bg-[#3E2723]"
+            className="w-full py-2 px-4 mt-1.5 bg-black text-white font-bold border border-black focus:outline-none hover:bg-[#3E2723] cursor-pointer"
           >
             Iniciar Sesión
           </button>

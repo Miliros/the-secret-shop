@@ -20,7 +20,7 @@ const Cart = () => {
           <p className="text-lg mb-6">Tu carrito está vacío</p>
           <button
             onClick={toggleCart}
-            className="bg-black text-white px-6 py-3 text-base font-medium shadow-md hover:bg-[#3E2723] focus:outline-none focus:ring focus:ring-gray-300"
+            className="bg-black text-white px-6 py-3 text-base font-medium cursor-pointer shadow-md hover:bg-[#3E2723] focus:outline-none focus:ring focus:ring-gray-300"
           >
             EMPEZÁ A COMPRAR
           </button>
@@ -63,7 +63,7 @@ const Cart = () => {
               >
                 <button
                   type="submit"
-                  className={`w-full border border-transparent px-4 py-3 text-base font-medium shadow-sm focus:outline-none focus:ring-offset-2 focus:ring-offset-gray-50 ${
+                  className={`w-full border border-transparent cursor-pointer px-4 py-3 text-base font-medium shadow-sm focus:outline-none focus:ring-offset-2 focus:ring-offset-gray-50 ${
                     totalToPay === 0
                       ? "bg-gray-200 cursor-not-allowed"
                       : "bg-black text-white hover:bg-[#3E2723]"
@@ -80,7 +80,7 @@ const Cart = () => {
                 o
                 <button
                   onClick={toggleCart}
-                  className="font-medium text-black hover:text-[#3E2723] m-1"
+                  className="font-medium text-black cursor-pointer hover:text-[#3E2723] m-1"
                 >
                   Continua comprando
                   <span aria-hidden="true"> &rarr;</span>

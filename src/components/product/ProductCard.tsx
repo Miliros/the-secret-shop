@@ -70,7 +70,7 @@ export default function ProductCard({
           </div>
           <div className="p-2 pt-0">
             <button
-              className="block w-full rounded-lg bg-blue-gray-900/10 py-3 px-4 text-[#3E2723] font-bold  uppercase transition-all  hover:scale-105 focus:scale-105"
+              className="block w-full rounded-lg bg-blue-gray-900/10 py-3 px-4 text-[#3E2723] font-bold cursor-pointer uppercase transition-all  hover:scale-105 focus:scale-105"
               type="button"
               onClick={(e) => {
                 e.stopPropagation();

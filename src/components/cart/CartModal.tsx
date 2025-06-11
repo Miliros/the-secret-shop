@@ -21,7 +21,7 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
           <button onClick={onClose}>
             <HiOutlineX
               size={24}
-              className=" text-black hover:text-[#3E2723] hover:scale-125 transition-transform duration-300"
+              className=" text-black hover:text-[#3E2723] hover:scale-125 transition-transform duration-300 cursor-pointer"
             />
           </button>
         </div>
